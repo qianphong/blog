@@ -40,7 +40,7 @@
 - `XSS` - Cross Site Scripting（跨站脚本攻击 （区别 CSS，所以简称 XSS））
 - `BSR` - Browser Site Render（客户端渲染）
 - `TDD` - Test Driven Development（测试驱动开发）
-- `BDD` - Behavior Driven Development（行为驱动开）
+- `BDD` - Behavior Driven Development（行为驱动开发）
 - `E2E` - End to End（端到端）
 - `CRUD` - Create Retrieve Update Delete（增删改查）
 - `JIT` - Just In Time（即时编译技术）
