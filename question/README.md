@@ -1,4 +1,4 @@
-# 问答
+# 问题分类
 
 - [计算机基础](./计算机基础.md)
 - [JavaScript](./JavaScript.md)
