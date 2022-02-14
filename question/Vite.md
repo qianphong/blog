@@ -1,6 +1,6 @@
 # Vite
 
-### 静态资源处理
+## 静态资源处理
 
 ```ts
 import imgUrl from './img.png'

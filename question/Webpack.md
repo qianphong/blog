@@ -1,6 +1,6 @@
 # Webpack
 
-### Webpack 路径中的 placeholder
+## Webpack 路径中的 placeholder
 
 - [id]：返回 chunk id
 - [path]：返回文件路径

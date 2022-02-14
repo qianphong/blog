@@ -17,8 +17,6 @@
 - [body-parser]() - Node.js 正文解析中间件
 - [puppeteer](https://github.com/puppeteer/puppeteer) - 可以在浏览器中手动执行的大多数操作都可以使用 Puppeteer 完成
 
----
-
 ## Vite
 
 - [vite-ssg](https://github.com/antfu/vite-ssg) - Vite 的服务器端生成
@@ -28,8 +26,6 @@
 - [vite-plugin-vue-layouts]()
 - [vite-plugin-windicss]()
 - [更多。。。](https://github.com/vitejs/awesome-vite)
-
----
 
 ## Webpack
 
@@ -63,8 +59,6 @@
 - [svelte](https://svelte.dev/) -
 - [lit](https://github.com/lit/lit/) - 用于构建快速、轻量级的 Web component。
 
----
-
 ## UI 框架 / 组件库
 
 - [antd](https://github.com/ant-design/ant-design) - React、阿里系
@@ -90,8 +84,6 @@
 - [three](https://github.com/mrdoob/three.js) - 3D
 - [zdog](https://github.com/metafizzy/zdog) - 圆形、扁平、设计师友好的伪 3D 引擎
 
----
-
 ## Vue
 
 - [@vue/compiler-sfc]()
@@ -100,8 +92,6 @@
 - [@vueuse/core]()
 - [vee-validate](https://vee-validate.logaretm.com/v3) - Vue.js 基于模板的验证框架
 - [unplugin-vue-components]() - Vue 的按需组件自动导入
-
----
 
 ## React
 
@@ -125,8 +115,6 @@
 - [fontmin](https://github.com/ecomfe/fontmin) -压缩字体
 - [immer](https://github.com/immerjs/immer) -通过简单地修改当前树来创建下一个不可变状态树
 
----
-
 ## 标准化
 
 - [ESLint](https://github.com/eslint/eslint) - 插件化并且可配置的 JavaScript 语法规则和代码风格的检查工具
@@ -134,8 +122,6 @@
 - [Husky](https://github.com/typicode/husky) - 使用 Git hooks 更简单的
 - [commitlint](https://github.com/conventional-changelog/commitlint) - 整理你的提交信息
 - [lint-staged](https://github.com/okonet/lint-staged) - 针对暂存的 git 文件运行 linter
-
----
 
 ## 其他
 

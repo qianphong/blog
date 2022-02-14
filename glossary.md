@@ -11,17 +11,17 @@
 - `CSP` - Content Security Policy（内容安全策略）
 - `CSRF` - Cross-site request forgery（跨站伪造请求）
 - `DNS` - Domain Name System（域名系统）
-- `ESM` - （）ECMA Script Module（）
+- `ESM` - ECMAScript Module
 - `GUI` - Graphical User Interface（图形用户界面）
 - `HMR` - Hot Module Replacement（热重载）
 - `I18N` - Internationalization（国际化）
 - `IDE` - Integrated Development Environment（集成编程开发环境）
 - `JSP` - Java Server Pages（Java 服务器页面）
 - `JVM` - Java Virtual Machine（Java 虚拟机）
-- `JWT` - Json Web Token（）
-- `MVC` - （）Model-View-Controller（软件设计模式，强调分离软件的业务逻辑和显示）
-- `MVVM` - Model-View-Viewmodel（）
-- `NPM` - （）Node Package Manager（Node.js 包管理器）
+- `JWT` - Json Web Token
+- `MVC` - Model-View-Controller（软件设计模式，强调分离软件的业务逻辑和显示）
+- `MVVM` - Model-View-Viewmodel
+- `NPM` - Node Package Manager（Node.js 包管理器）
 - `Polyfill` - 是一块代码（通常是 Web 上的 JavaScript），用来为旧浏览器提供它没有原生支持的较新的功能。
 - `RFC` - Request For Comments（协议或标准的请求注解）
 - `Scope` - 作用域，当前的执行上下文
