@@ -1,0 +1,46 @@
+# 术语表
+
+- `AMD` - Asynchronous Module Definition（异步模块定义）
+- `API` - Application Programming Interface（应用编程接口）
+- `AST` - Abstract Syntax Tree（抽象语法树）
+- `BFC` - Block Formatting Context（块级格式化上下文）
+- `CDN` - Content Delivery Network（内容分发网络）
+- `CLI` - Command-Line Interface（命令行界面）
+- `CMD` - Common Module Definition（公共模块定义）
+- `CORS` - Cross-Origin Resource Sharing（跨域资源共享）
+- `CSP` - Content Security Policy（内容安全策略）
+- `CSRF` - Cross-site request forgery（跨站伪造请求）
+- `DNS` - Domain Name System（域名系统）
+- `ESM` - （）ECMA Script Module（）
+- `GUI` - Graphical User Interface（图形用户界面）
+- `HMR` - Hot Module Replacement（热重载）
+- `I18N` - Internationalization（国际化）
+- `IDE` - Integrated Development Environment（集成编程开发环境）
+- `JSP` - Java Server Pages（Java 服务器页面）
+- `JVM` - Java Virtual Machine（Java 虚拟机）
+- `JWT` - Json Web Token（）
+- `MVC` - （）Model-View-Controller（软件设计模式，强调分离软件的业务逻辑和显示）
+- `MVVM` - Model-View-Viewmodel（）
+- `NPM` - （）Node Package Manager（Node.js 包管理器）
+- `Polyfill` - 是一块代码（通常是 Web 上的 JavaScript），用来为旧浏览器提供它没有原生支持的较新的功能。
+- `RFC` - Request For Comments（协议或标准的请求注解）
+- `Scope` - 作用域，当前的执行上下文
+- `SEO` - Search Engine Optimization（(搜索引擎优化) 是一种让网站在搜索引擎结果中更加清晰, 也帮助我们将搜索结果更靠前）
+- `SFC` - Single File Component（单文件组件）
+- `SPA` - single page web application（单页 Web 应用）
+- `SRP` - Single Responsibility Principle（单一职责原则）
+- `SSG` - Static Site Generation（静态网站渲染）
+- `SSO` - Single Sign On（单点登录）
+- `SSR` - Server Side Render（服务端渲染）
+- `Tree Sharking` - 描述移除 JavaScript 上下文中的未引用代码(dead-code) 行为的术语
+- `UMD` - Universal Module Definition（通用模块定义）
+- `URI` - Uniform Resource Identifier（统一资源标识符）
+- `URL` - Uniform Resource Locator（统一资源定位符）
+- `URN` - Uniform Resource Name（统一资源名称）
+- `XSS` - Cross Site Scripting（跨站脚本攻击 （区别 CSS，所以简称 XSS））
+- `BSR` - Browser Site Render（客户端渲染）
+- `TDD` - Test Driven Development（测试驱动开发）
+- `BDD` - Behavior Driven Development（行为驱动开）
+- `E2E` - End to End（端到端）
+- `CRUD` - Create Retrieve Update Delete（增删改查）
+- `JIT` - Just In Time（即时编译技术）

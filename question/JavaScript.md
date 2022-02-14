@@ -1,6 +1,6 @@
 # JavaScript
 
-- JavaScript 是如何运行的，解释性语言和编译型语言的差异是什么
+### JavaScript 是如何运行的，解释性语言和编译型语言的差异是什么
 
 JavaScript 是一门解释型的动态语言。有些程序设计语言将编译的过程和最终转换成目标程序进行执行的过程混合在一起，这种语言转换程序通常被称为解释器。解释器和编译器有很多相似之处，都需要对源程序进行分析，并转换成目标机器可识别的机器语言进行执行。只是解释器是在转换源程序的同时立马执行对应的机器语言（转换和执行的过程不分离），每执行一次都要进行转换，而编译器得先把源程序全部转换成机器语言并产生目标文件，然后将目标文件写入相应的程序存储器进行执行（转换和执行的过程分离），运行时不需要重新转换。
 
@@ -22,3 +22,17 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 1. https://juejin.cn/post/6987549240436195364#heading-7
 2. https://segmentfault.com/a/1190000020438413
 3. https://m.html.cn/qa/javascript/11311.html
+
+---
+
+### ESModule 和 CommonJS 的区别
+
+- commonJs 是被加载的时候运行，esModule 是编译的时候运行
+- commonJs 输出的是值的浅拷贝，esModule 输出值的引用
+- commentJs 具有缓存。在第一次被加载时，会完整运行整个文件并输出一个对象，拷贝（浅拷贝）在内存中。下次加载文件时，直接从内存中取值
+
+相关链接：
+
+1. https://blog.csdn.net/weixin_34406796/article/details/91374453
+2. https://zhuanlan.zhihu.com/p/161015809
+3. https://www.jianshu.com/p/aaf912d7329e

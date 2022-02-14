@@ -6,4 +6,6 @@
 - [HTML&CSS](./HTML&CSS.md)
 - [Vue](./Vue.md)
 - [React](./React.md)
+- [Vite](./Vite.md)
+- [Webpack](./Webpack.md)
 - [WebAssembly](./WebAssembly.md)
