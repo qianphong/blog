@@ -25,7 +25,7 @@
 - [vite-plugin-pwa]()
 - [vite-plugin-vue-layouts]()
 - [vite-plugin-windicss]()
-- [更多。。。](https://github.com/vitejs/awesome-vite)
+- [more 👉](https://github.com/vitejs/awesome-vite)
 
 ## Webpack
 
