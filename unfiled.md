@@ -1,3 +1,5 @@
+# 未分类
+
 - 网页引用的资源去掉协议部分（https:和 http）
 
 ```diff
@@ -14,3 +16,12 @@
 [1] http://pandacafe.net/page/10?mktwly=whlmg1&ywparq=cg5tj3
 
 ---
+
+- 正则匹配汉字
+
+```js
+const reg = /\p{Script=han}/u
+```
+
+相关链接：
+[1] https://zhuanlan.zhihu.com/p/33335629
