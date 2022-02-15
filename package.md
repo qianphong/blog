@@ -61,13 +61,13 @@
 
 ## UI 框架 / 组件库
 
-- [antd](https://github.com/ant-design/ant-design) - React、阿里系
-- [ant-design-vue](https://github.com/vueComponent/ant-design-vue) - Vue、Ant-Design、社区实现、
+- [antd](https://github.com/ant-design/ant-design) - React、阿里
+- [ant-design-vue](https://github.com/vueComponent/ant-design-vue) - Vue、Ant-Design、社区实现
 - [element-plus](https://github.com/element-plus/element-plus) - Vue、饿了么
 - [vant](https://github.com/youzan/vant) - Vue、有赞、移动端
 - [@nutui/nutui](https://github.com/jdf2e/nutui) - Vue、京东、移动端
-- [tdesign-react](https://github.com/Tencent/tdesign-react)- React、腾讯系
-- [tdesign-vue](https://github.com/Tencent/tdesign-vue) - Vue、腾讯系
+- [tdesign-react](https://github.com/Tencent/tdesign-react)- React、腾讯
+- [tdesign-vue](https://github.com/Tencent/tdesign-vue) - Vue、腾讯
 - [@arco-design/web-react](https://github.com/arco-design/arco-design) - React、字节跳动
 - [@arco-design/web-vue](https://github.com/arco-design/arco-design-vue) - Vue、字节跳动
 - [@douyinfe/semi-ui](https://github.com/DouyinFE/semi-design) - React、抖音
