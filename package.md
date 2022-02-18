@@ -71,7 +71,7 @@
 - [@arco-design/web-react](https://github.com/arco-design/arco-design) - React、字节跳动
 - [@arco-design/web-vue](https://github.com/arco-design/arco-design-vue) - Vue、字节跳动
 - [@douyinfe/semi-ui](https://github.com/DouyinFE/semi-design) - React、抖音
-- [naive-ui](https://github.com/TuSimple/naive-ui)
+- [naive-ui](https://github.com/TuSimple/naive-ui) - Vue
 - [lulu-ui](https://github.com/yued-fe/lulu) - 阅文集团、张鑫旭
 - [bootstrap](https://github.com/twbs/bootstrap)
 - [vuetify](https://github.com/vuetifyjs/vuetify) - Vue、Material Design
