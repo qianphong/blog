@@ -21,3 +21,7 @@ const count = inject(countKey)
 // 提供一个默认值
 const count = inject(countKey, ref(0))
 ```
+
+相关链接
+
+1. https://www.jianshu.com/p/7064c5f8f143
