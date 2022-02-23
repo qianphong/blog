@@ -10,9 +10,9 @@ type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends (<T>() => T extends Y
   : false
 ```
 
-## `unknow` 和 `any`
+## `unknown` 和 `any`
 
-`any` 和 `unknow` 都是 TypeScript 顶级类型，`unknown` 类型只能被赋值给 `any` 类型和 `unknown` 类型本身。  
+`any` 和 `unknown` 都是 TypeScript 顶级类型，`unknown` 类型只能被赋值给 `any` 类型和 `unknown` 类型本身。  
 直观地说，这是有道理的：  
 只有能够保存任意类型值的容器才能保存 `unknown` 类型的值。毕竟我们不知道变量 `value` 中存储了什么类型的值。`unknown` 和 `any` 都可以转化成任何类型，在静态编译的时候，`unknown` 不能调用任何方法，而 `any` 可以。
 
