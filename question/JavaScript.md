@@ -25,7 +25,8 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 
 ## ESModule 和 CommonJS 的区别
 
-- commonJs 是被加载的时候运行，esModule 是编译的时候运行
+- ESM 采用静态的加载方式，也就是模块中导入导出的依赖关系在代码编译时就确定下来，因此采用 ESM 进行代码设计时可以在编译时通过 ESLint 快速定位出模块的词法和语法错误以及类型信息等，CommonJS 相对与 ESM 在加载模块的方式上存在明显的差异，是因为 CommonJS 在运行时进行加载方式的动态解析，在运行阶段才能确定导入导出关系，因此无法进行静态编译优化和类型检查，和 Tree Sharking
+
 - commonJs 输出的是值的浅拷贝，esModule 输出值的引用
 - commentJs 具有缓存。在第一次被加载时，会完整运行整个文件并输出一个对象，拷贝（浅拷贝）在内存中。下次加载文件时，直接从内存中取值
 
@@ -34,6 +35,7 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 1. https://blog.csdn.net/weixin_34406796/article/details/91374453
 2. https://zhuanlan.zhihu.com/p/161015809
 3. https://www.jianshu.com/p/aaf912d7329e
+4. https://juejin.cn/post/6996815121855021087#heading-6
 
 ## `Object` 和 `Map` 的比较
 
