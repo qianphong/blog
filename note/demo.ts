@@ -53,3 +53,12 @@ type Test = {
 }
 type Test1 = ToMutable<Test>
 type Test2 = ToRequired<Test>
+
+const useTest = <T>(cb?: (...args: T[]) => unknown) => {
+  return { cb }
+}
+const { cb } = useTest((a: number | string, b, c) => {
+  if (typeof a === 'string') return a + b + c
+})
+
+const result = cb?.(1, '2', 3)
