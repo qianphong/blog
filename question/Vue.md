@@ -1,6 +1,6 @@
 # Vue
 
-## `provide` / `inject` 使用 `InjectionKey` 推断类型
+## `provide`/`inject` 使用 `InjectionKey` 推断类型
 
 ```ts
 // parent.ts
@@ -28,7 +28,7 @@ const count = inject(countKey, ref(0))
 
 ## 使用类型声明的默认 `props` 值
 
-仅限类型的`defineProps`声明的不足之处在于，他没有可以给`props`提供默认值的方式，为了解决这个问题，提供了`withDefaults`的编译器宏：
+仅限类型的 `defineProps` 声明的不足之处在于，他没有可以给 `props` 提供默认值的方式，为了解决这个问题，提供了 `withDefaults` 的编译器宏：
 
 ```ts
 interface Props {
@@ -42,7 +42,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 ```
 
-## 为组件模板`ref` 标注类型
+## 为组件模板 `ref` 标注类型
 
 有时，你可能需要为一个子组件添加一个模板 ref，以便调用它公开的方法，举个例子，我么有一个 `MyModal` 子组件，它有一个打开模态框的方法：
 
@@ -91,7 +91,9 @@ const name = ref('')
 <template>
   <Child v-model:name.capitalize="name" />
 </template>
+```
 
+```vue
 <!-- Child.vue -->
 <script setup lang="ts">
 const props = withDefaults(
@@ -121,3 +123,5 @@ const computedName = computed({
   <input v-model="computedName" />
 </template>
 ```
+
+1. https://staging-cn.vuejs.org/guide/components/events.html#usage-with-v-model
