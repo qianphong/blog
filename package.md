@@ -100,10 +100,11 @@
 
 ## 工具
 
-- [dayjs]() - 格式化日期
+- [dayjs](https://github.com/iamkun/dayjs) - 格式化日期
 - [numeral](https://github.com/adamwdraper/Numeral-js) - 格式化数字
 - [filesize](https://github.com/avoidwork/filesize.js) - 格式化文件大小
-- [chroma-js]() - 格式化颜色，操作颜色
+- [colord](https://github.com/omgovich/colord) - Colord 是一个小巧而强大的工具，用于高性能的颜色操作和转换
+- [chroma-js](https://github.com/gka/chroma.js) - 格式化颜色，操作颜色
 - [yup](https://github.com/jquense/yup) - 用于值解析和验证的 JavaScript 模式构建器
 - [crypto-js]() - 加密库
 - [@amap/amap-jsapi-loader]() - 高德官网提供的地图 JSAPI 加载器，可以避免多种异步加载 API 的错误用法，类型声明`@amap/amap-jsapi-types`
