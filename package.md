@@ -16,6 +16,8 @@
 - [concurrently]() - 同时运行命令
 - [body-parser]() - Node.js 正文解析中间件
 - [puppeteer](https://github.com/puppeteer/puppeteer) - 可以在浏览器中手动执行的大多数操作都可以使用 Puppeteer 完成
+- [pm2](https://github.com/Unitech/pm2) - Node 应用程序的管理器
+- [envinfo](https://github.com/tabrindle/envinfo) - 获取各种开发信息，如操作系统、浏览器等
 
 ## Vite
 
