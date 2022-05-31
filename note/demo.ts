@@ -62,3 +62,5 @@ const { cb } = useTest((a: number | string, b, c) => {
 })
 
 const result = cb?.(1, '2', 3)
+
+type FirstIfString<T> = T extends [infer F extends string, ...unknown[]] ? F : never

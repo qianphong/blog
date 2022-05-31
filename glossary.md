@@ -44,3 +44,4 @@
 - `E2E` - End to End（端到端）
 - `CRUD` - Create Retrieve Update Delete（增删改查）
 - `JIT` - Just In Time（即时编译技术）
+- `IIFE` - Immediately-invoked function expression（立即执行函数表达式）
