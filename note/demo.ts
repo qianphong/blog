@@ -63,4 +63,14 @@ const { cb } = useTest((a: number | string, b, c) => {
 
 const result = cb?.(1, '2', 3)
 
-type FirstIfString<T> = T extends [infer F extends string, ...unknown[]] ? F : never
+// type FirstIfString<T> = T extends [infer F extends string, ...unknown[]] ? F : never
+
+const str = 1
+
+type GetReturnType<F> = F extends (...args: any[]) => infer ReturnType
+  ? ReturnType
+  : never
+
+type CapitalizeStr<T extends string> = T extends `${infer F}${infer Rest}`
+  ? `${Uppercase<F>}${Rest}`
+  : T
