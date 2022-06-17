@@ -10,14 +10,15 @@
 - [ora](https://github.com/sindresorhus/ora) - 终端加载显示
 - [figlet](https://github.com/patorjk/figlet.js) - 可以用来定制 CLI 执行时的头部
 - [rimraf](https://github.com/isaacs/rimraf) - 删除文件或目录
-- [nodemon]() - 在 node.js 应用程序开发期间使用的简单监视器脚本
-- [cheerio]() - 服务端的 jQuery
-- [superagent]() - 优雅且功能丰富的浏览器/节点 HTTP，带有流畅的 API
-- [concurrently]() - 同时运行命令
-- [body-parser]() - Node.js 正文解析中间件
+- [nodemon](https://github.com/remy/nodemon) - 在 node.js 应用程序开发期间使用的简单监视器脚本
+- [cheerio](https://github.com/cheeriojs/cheerio) - 服务端的 jQuery
+- [superagent](https://github.com/visionmedia/superagent) - 优雅且功能丰富的浏览器/节点 HTTP，带有流畅的 API
+- [concurrently](https://github.com/open-cli-tools/concurrently) - 同时运行命令
+- [body-parser](https://github.com/expressjs/body-parser) - Node.js 正文解析中间件
 - [puppeteer](https://github.com/puppeteer/puppeteer) - 可以在浏览器中手动执行的大多数操作都可以使用 Puppeteer 完成
 - [pm2](https://github.com/Unitech/pm2) - Node 应用程序的管理器
 - [envinfo](https://github.com/tabrindle/envinfo) - 获取各种开发信息，如操作系统、浏览器等
+- [dotenv](https://github.com/motdotla/dotenv) - 将环境变量从 `.env` 文件加载到 `process.env` 中
 
 ## Vite
 
@@ -80,12 +81,13 @@
 - [vuetify](https://github.com/vuetifyjs/vuetify) - Vue、Material Design
 - [quasar](https://github.com/quasarframework/quasar) - Vue
 
-## 图表 / 3D
+## 数据可视化/动画
 
 - [echart](https://github.com/apache/echarts) - 图表、百度
 - [d3](https://github.com/d3/d3) - Data-Driven Documents
 - [three](https://github.com/mrdoob/three.js) - 3D
 - [zdog](https://github.com/metafizzy/zdog) - 圆形、扁平、设计师友好的伪 3D 引擎
+- [mo.js](https://github.com/mojs/mojs) - The motion graphics toolbelt for the web.
 
 ## Vue
 
