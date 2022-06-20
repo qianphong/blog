@@ -74,3 +74,14 @@ type GetReturnType<F> = F extends (...args: any[]) => infer ReturnType
 type CapitalizeStr<T extends string> = T extends `${infer F}${infer Rest}`
   ? `${Uppercase<F>}${Rest}`
   : T
+
+type ReverseArr<T extends readonly unknown[]> = T extends readonly [
+  infer F,
+  ...infer Rest,
+]
+  ? [...ReverseArr<Rest>, F]
+  : []
+
+const arr1 = [1, 2, 3, 4, 5, 6] as const
+
+type Arr = ReverseArr<typeof arr1>
