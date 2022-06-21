@@ -85,3 +85,15 @@ type ReverseArr<T extends readonly unknown[]> = T extends readonly [
 const arr1 = [1, 2, 3, 4, 5, 6] as const
 
 type Arr = ReverseArr<typeof arr1>
+
+type IsAny<T> = '1' extends '2' & T ? true : false
+type IsEqual<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B
+  ? 1
+  : 2
+  ? true
+  : false
+type IsUnion<A, B = A> = A extends A ? ([B] extends [A] ? false : true) : never
+type IsNever<T> = [T] extends [never] ? true : false
+
+type TestAny<T> = T extends number ? 1 : 2
+type Test22 = TestAny<any> // 1 | 2

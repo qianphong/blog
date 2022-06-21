@@ -2,7 +2,7 @@
 import type { Equal, Expect } from './test-utils'
 
 type cases = [Expect<Equal<DeepReadonly<X>, Expected>>]
-
+type RX = DeepReadonly<X>
 type X = {
   a: () => 22
   b: string
@@ -50,10 +50,12 @@ type Expected = {
 }
 
 // ============= Your Code Here =============
-type DeepReadonly<Obj extends Record<string, any>> = {
-  readonly [Key in keyof Obj]: Obj[Key] extends object
-    ? Obj[Key] extends Function
-      ? Obj[Key]
-      : DeepReadonly<Obj[Key]>
-    : Obj[Key]
-}
+type DeepReadonly<Obj extends Record<string, any>> = Obj extends any
+  ? {
+      readonly [Key in keyof Obj]: Obj[Key] extends object
+        ? Obj[Key] extends Function
+          ? Obj[Key]
+          : DeepReadonly<Obj[Key]>
+        : Obj[Key]
+    }
+  : never
