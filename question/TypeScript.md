@@ -38,3 +38,28 @@ type Language = 'ts' | never
 ## TypeScript 的文件作用域
 
 默认情况下，当你在一个新的 `.ts`文件中写下代码时，它是处于全局命名空间中，要解决这个问题应该要是该文件的根级别包含`export`或者`import`，这是会创建一个本地的作用域。通过`declare global { /* global namespace */ }`可以在本地的作用域中向全局的作用域中添加类型声明。
+
+## 判断 空对象类型 `{}`
+
+```ts
+type Falsy = { [key: string]: never } // Record<string, never>
+type IsEmpty<T> = T extends Falsy ? true : false
+```
+
+## `T[number]` 获取的联合类型不会触发 distributive
+
+```ts
+type Equal<X, Y> = (<T>() => X extends T ? 1 : 2) extends <T>() => Y extends T
+  ? 1
+  : 2
+  ? true
+  : false
+type Test1<T extends unknown[]> = T[number] extends 'a' | 'b' ? true : false
+type Test2<T> = T extends 'a' | 'b' ? true : false
+
+type Case = Equal<['a', '1'][number], 'a' | '1'> // true
+type Case1 = Test1<['a', '1']> // false
+type Case2 = Test2<'a' | '1'> // boolean
+```
+
+> https://www.typescriptlang.org/play?#code/C4TwDgpgBAogjgVwIYBsA8ANANFAmgPigF4oAKNAFX1IEpjCMoIAPYCAOwBMBnKCqAPxQAjFABcUAEx0WbLr0rU6RQriasOPPgCgogkbvFTDQ4ACcEEQxIBmqbldCQ+EbsGGV1crQnYBrdgB7AHd2AG0AXUISCjD2BABbACMIMwivTV4AciQsqAAfKCykvNMLaFt7R3BoCldgSUViPgz5ItyCopL9c0sjOxQHbW0naABhJAdm+GR0MJysnCzhLIi4xJS0pY7C5azCAHoDqF7q5wmHURj6j3ncpZWoqCOoAaHRqAuISWa6t0aFp09odjklAoEUBAkOwgA
