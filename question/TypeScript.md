@@ -62,4 +62,4 @@ type Case1 = Test1<['a', '1']> // false
 type Case2 = Test2<'a' | '1'> // boolean
 ```
 
-> https://www.typescriptlang.org/play?#code/C4TwDgpgBAogjgVwIYBsA8ANANFAmgPigF4oAKNAFX1IEpjCMoIAPYCAOwBMBnKCqAPxQAjFABcUAEx0WbLr0rU6RQriasOPPgCgogkbvFTDQ4ACcEEQxIBmqbldCQ+EbsGGV1crQnYBrdgB7AHd2AG0AXUISCjD2BABbACMIMwivTV4AciQsqAAfKCykvNMLaFt7R3BoCldgSUViPgz5ItyCopL9c0sjOxQHbW0naABhJAdm+GR0MJysnCzhLIi4xJS0pY7C5azCAHoDqF7q5wmHURj6j3ncpZWoqCOoAaHRqAuISWa6t0aFp09odjklAoEUBAkOwgA
+> [tsplaygroud](https://www.typescriptlang.org/play?#code/C4TwDgpgBAogjgVwIYBsA8ANANFAmgPigF4oAKNAFX1IEpjCMoIAPYCAOwBMBnKCqAPxQAjFABcUAEx0WbLr0rU6RQriasOPPgCgogkbvFTDQ4ACcEEQxIBmqbldCQ+EbsGGV1crQnYBrdgB7AHd2AG0AXUISCjD2BABbACMIMwivTV4AciQsqAAfKCykvNMLaFt7R3BoCldgSUViPgz5ItyCopL9c0sjOxQHbW0naABhJAdm+GR0MJysnCzhLIi4xJS0pY7C5azCAHoDqF7q5wmHURj6j3ncpZWoqCOoAaHRqAuISWa6t0aFp09odjklAoEUBAkOwgA)
