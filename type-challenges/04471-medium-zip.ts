@@ -10,7 +10,6 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-
 type Zip<T extends unknown[], U extends unknown[]> = [T, U] extends [
   [infer L, ...infer RestT],
   [infer R, ...infer RestU],
@@ -18,7 +17,7 @@ type Zip<T extends unknown[], U extends unknown[]> = [T, U] extends [
   ? [[L, R], ...Zip<RestT, RestU>]
   : []
 
-type T = Zip<[1, 2, 3], ['1', '2']>
+// type T = Zip<[1, 2, 3], ['1', '2']>
 
 // type GreaterThen<
 //   A extends number,
