@@ -63,3 +63,17 @@ type Case2 = Test2<'a' | '1'> // boolean
 ```
 
 > [tsplaygroud](https://tsplay.dev/WPROJN)
+
+## 元组和数组类型的区别
+
+元组的长度是一个固定的数值（1、2、3 等），而数组的长度是 `number`
+
+```ts
+type T = [number, string, boolean] // T['length'] 类型是 3
+
+type U = string[] // T['length'] 类型是 number
+```
+
+links
+
+> 1.https://juejin.cn/book/7047524421182947366/section/7048282437238915110
