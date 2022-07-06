@@ -12,5 +12,3 @@ type cases = [
 
 // ============= Your Code Here =============
 type Flip<T> = { [K in keyof T as `${T[K]}`]: K }
-
-type C = Flip<{ pi: 3.14; bool: true }>
