@@ -1,8 +1,8 @@
-# 记点什么 🤔
+# Recording 🤔
 
-- [问题](./question)
-- [待办](./todo.md)
-- [常用包](./package.md)
-- [术语表](./glossary.md)
-- [type-challenges](./type-challenges)
-- [待归档](./unfiled.md)
+- [Question](./question)
+- [Todo](./todo.md)
+- [Package](./package.md)
+- [Glossary](./glossary.md)
+- [Type-Challenges](./type-challenges)
+- [Unfiled](./unfiled.md)

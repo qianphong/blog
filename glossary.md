@@ -1,4 +1,4 @@
-# 术语表
+# Glossary
 
 - `AMD` - Asynchronous Module Definition（异步模块定义）
 - `API` - Application Programming Interface（应用编程接口）
