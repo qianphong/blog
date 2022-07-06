@@ -1,4 +1,4 @@
-# Recording 🤔
+# Recording 🤔🥳
 
 - [Question](./question)
 - [Todo](./todo.md)
