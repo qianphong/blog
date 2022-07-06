@@ -20,6 +20,4 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-type Length<T extends readonly any[]> = 'length' extends keyof T
-  ? T['length']
-  : never
+type Length<T extends readonly any[]> = T['length']
