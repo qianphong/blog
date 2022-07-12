@@ -104,6 +104,7 @@
 
 ## 工具
 
+- [degit](https://github.com/Rich-Harris/degit) - 使用 git 仓库生成项目
 - [dayjs](https://github.com/iamkun/dayjs) - 格式化日期
 - [numeral](https://github.com/adamwdraper/Numeral-js) - 格式化数字
 - [filesize](https://github.com/avoidwork/filesize.js) - 格式化文件大小
