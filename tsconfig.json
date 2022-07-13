@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "noImplicitThis": true
+  },
+  "include": ["type-challenges/**/*.ts"]
+}
