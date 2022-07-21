@@ -77,3 +77,9 @@ type U = string[] // T['length'] 类型是 number
 links
 
 > 1.https://juejin.cn/book/7047524421182947366/section/7048282437238915110
+
+## 通过以下方法区分可选项
+
+```ts
+type Test = {} extends { a?: number } ? true : false
+```
