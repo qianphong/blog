@@ -117,10 +117,10 @@ function createLog(source: string, message?: string): number {
 }
 
 createLog('message') // OK
-createLog('source', 'message') // 应有 1 个参数，但获得 2 个。
+createLog('source', 'message') // Error 应有 1 个参数，但获得 2 个。
 ```
 
-当至少具有一个函数重载的签名时，只有重载是可见的，最后一个声明签名（也可以被成为签名的实现）对
+当至少具有一个函数重载的签名时，只有重载是可见的，最后一个声明签名（也可以被称为签名的实现）对
 签名的形状并没有贡献，因此，要获得所需的行为，你需要添加额外的重载；
 
 ```ts
