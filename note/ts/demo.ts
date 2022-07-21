@@ -116,3 +116,13 @@ function foo(x: SomeInterface | SomeOtherInterface) {
     console.log(x.length)
   }
 }
+
+/* ---------------------------------- 函数重载 ---------------------------------- */
+function createLog(message: string): number
+function createLog(source: string, message: string) //
+function createLog(source: string, message?: string): number {
+  return 0
+}
+
+createLog('message') // OK
+createLog('source', 'message') // ERROR: Supplied parameters do not match any signature

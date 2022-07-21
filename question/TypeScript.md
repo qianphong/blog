@@ -105,3 +105,28 @@ function foo(x: SomeInterface | SomeOtherInterface) {
   }
 }
 ```
+
+## 关于函数重载
+
+**函数实现签名**，它并不是重载的一部分
+
+```ts
+function createLog(message: string): number
+function createLog(source: string, message?: string): number {
+  return 0
+}
+
+createLog('message') // OK
+createLog('source', 'message') // 应有 1 个参数，但获得 2 个。
+```
+
+当至少具有一个函数重载的签名时，只有重载是可见的，最后一个声明签名（也可以被成为签名的实现）对
+签名的形状并没有贡献，因此，要获得所需的行为，你需要添加额外的重载；
+
+```ts
+function createLog(message: string): number
+function createLog(source: string, message: string): number
+function createLog(source: string, message?: string) {
+  return 0
+}
+```
