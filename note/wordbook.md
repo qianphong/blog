@@ -1,0 +1,12 @@
+- manner
+- similar
+- capability
+- indentical
+- canonical
+- conclusions
+- flawed
+- negligible
+- optimization
+- strategy
+- tutorial
+- adopter

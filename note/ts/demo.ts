@@ -1,3 +1,4 @@
+/* ---------------------------- ParseQueryString ---------------------------- */
 type ParseQueryString<
   T extends string,
   O = {},
@@ -7,6 +8,7 @@ type ParseQueryString<
 
 type res = ParseQueryString<'a=1&b=2&c=3'>
 
+/* --------------------------------- MapType -------------------------------- */
 type MapType<T extends { [K: string]: number | string }> = {
   [Key in keyof T as `${Key & string}${Key & string}${Key &
     string}`]: `${T[Key]}${T[Key]}${T[Key]}`
@@ -14,31 +16,17 @@ type MapType<T extends { [K: string]: number | string }> = {
 
 type res1 = MapType<{ a: 1 }>
 
-type GetFist<T extends unknown[]> = T extends [infer F, ...unknown[]]
-  ? F
-  : never
-
-type res2 = GetFist<['1', 2, 3]>
-
 type GetRefProps<Props> = Props extends { ref?: any } ? Props['ref'] : never
 type GetRefPropsRes = GetRefProps<{ ref?: undefined; a: 2 }>
 
+/* --------------------------------- 关于never -------------------------------- */
 type A = never extends never ? true : false
 
 type J<T> = T extends string ? true : false
 
 type B = J<never>
 
-type MergeArr<A extends unknown[], B extends unknown[]> = {
-  [K in keyof A]: K extends keyof B ? [A[K], B[K]] : undefined
-}
-
-type Res3 = MergeArr<[1, 2], ['a', 'b']>
-const b: Res3 = [
-  [1, 'a'],
-  [2, 'b'],
-]
-
+/* --------------------------- Readonly 和 requried -------------------------- */
 type ToMutable<T> = {
   -readonly [key in keyof T]: T[key]
 }
@@ -54,6 +42,7 @@ type Test = {
 type Test1 = ToMutable<Test>
 type Test2 = ToRequired<Test>
 
+/* ---------------------------------- 函数测试 ---------------------------------- */
 const useTest = <T>(cb?: (...args: T[]) => unknown) => {
   return { cb }
 }
@@ -65,16 +54,7 @@ const result = cb?.(1, '2', 3)
 
 // type FirstIfString<T> = T extends [infer F extends string, ...unknown[]] ? F : never
 
-const str = 1
-
-type GetReturnType<F> = F extends (...args: any[]) => infer ReturnType
-  ? ReturnType
-  : never
-
-type CapitalizeStr<T extends string> = T extends `${infer F}${infer Rest}`
-  ? `${Uppercase<F>}${Rest}`
-  : T
-
+/* ---------------------------------- 反转数组 ---------------------------------- */
 type ReverseArr<T extends readonly unknown[]> = T extends readonly [
   infer F,
   ...infer Rest,
@@ -85,6 +65,8 @@ type ReverseArr<T extends readonly unknown[]> = T extends readonly [
 const arr1 = [1, 2, 3, 4, 5, 6] as const
 
 type Arr = ReverseArr<typeof arr1>
+
+/* ---------------------- IsAny、isEqual、IsUnion、IsNever --------------------- */
 
 type IsAny<T> = '1' extends '2' & T ? true : false
 type IsEqual<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B
@@ -97,3 +79,40 @@ type IsNever<T> = [T] extends [never] ? true : false
 
 type TestAny<T> = T extends number ? 1 : 2
 type Test22 = TestAny<any> // 1 | 2
+
+/* ---------------------------------- 协变逆变 ---------------------------------- */
+
+type A1 = { a: number }
+type B1 = { a: number; b: number }
+
+type AAAs = B1 extends A1 ? true : false
+let aaa: A1[] = [{ a: 1 }]
+let bbb: B1[] = [{ a: 1, b: 2 }]
+
+aaa = bbb
+
+let aaaa = (a: { a: string }) => {}
+
+let bbbb = (b: { a: string; b: number }) => {}
+
+// @ts-expect-error
+aaaa = bbbb
+
+/* --------------------------------- is 关键字 --------------------------------- */
+interface SomeInterface {
+  name: string
+  length: number
+}
+
+interface SomeOtherInterface {
+  questions: string[]
+}
+
+function isSomeInterface(x: any): x is SomeInterface {
+  return typeof x.name === 'string' && typeof x.length === 'number'
+}
+function foo(x: SomeInterface | SomeOtherInterface) {
+  if (isSomeInterface(x)) {
+    console.log(x.length)
+  }
+}

@@ -49,4 +49,5 @@ type D = C extends A ? true : false
 // 逆变
 type Func = (a: 'text' | '234') => void
 // 被赋值函数的参数要是赋值函数参数的子类型
+// @ts-expect-error
 const a1: Func = (a: 'text') => undefined

@@ -19,3 +19,7 @@
 ## 关于 `useMemo`
 
 `useMemo` 和 `useCallback` 要配合 `React.meme` 使用，在不确定是否要用时，那就不要用
+
+## 函数式组件和类组件有何不同？
+
+> https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/

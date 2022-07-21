@@ -83,3 +83,25 @@ links
 ```ts
 type Test = {} extends { a?: number } ? true : false
 ```
+
+## `is` 关键字，用于判断一个变量是否属于某特接口/类型
+
+```ts
+interface SomeInterface {
+  name: string
+  length: number
+}
+
+interface SomeOtherInterface {
+  questions: string[]
+}
+
+function isSomeInterface(x: any): x is SomeInterface {
+  return typeof x.name === 'string' && typeof x.length === 'number'
+}
+function foo(x: SomeInterface | SomeOtherInterface) {
+  if (isSomeInterface(x)) {
+    console.log(x.length)
+  }
+}
+```
