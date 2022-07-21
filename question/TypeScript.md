@@ -130,3 +130,5 @@ function createLog(source: string, message?: string) {
   return 0
 }
 ```
+
+> 1. https://jkchao.github.io/typescript-book-chinese/faqs/type-system-behavior.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E5%BE%97%E5%88%B0-supplied-parameters-do-not-match-any-signature-%E7%9A%84%E9%94%99%E8%AF%AF%EF%BC%9F
