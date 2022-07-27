@@ -48,3 +48,25 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 相关链接
 
 1. https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+## `Map` 和 `WeakMap` 区别
+
+- `WeakMap` 只能使用对象作为键值，而值是任意的
+- `WeakMap` 的键是弱引用的，不影响垃圾回收器的工作
+
+```ts
+const map = new Map()
+const weakMap = new WeakMap()
+
+;(function () {
+  const foo = { foo: 1 }
+  const bar = { bar: 1 }
+  map.set(foo, 'foo')
+  weakMap.set(bar, 'bar')
+})()
+
+console.log('map', map) // { [foo] : 'foo'}
+console.log('weakMap', weakMap) // 空的
+```
+
+> [WeakMap](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
