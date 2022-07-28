@@ -19,6 +19,8 @@
 - [pm2](https://github.com/Unitech/pm2) - Node 应用程序的管理器
 - [envinfo](https://github.com/tabrindle/envinfo) - 获取各种开发信息，如操作系统、浏览器等
 - [dotenv](https://github.com/motdotla/dotenv) - 将环境变量从 `.env` 文件加载到 `process.env` 中
+- [npm-run-all](https://github.com/mysticatea/npm-run-all) - 用于并行或顺序运行多个 npm 脚本的 CLI 工具。
+- [semver](https://github.com/npm/node-semver) - 语义化版本号管理的 npm 库
 
 ## Vite
 
