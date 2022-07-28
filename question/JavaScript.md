@@ -42,7 +42,7 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 - `Map` 默认不包含任何键，只包含显式插入的键。
 - `Map` 的键可以是 **任意值**，包括函数、对象或是任意基本类型
 - `Map` 的键值对个数可以轻易地通过 `size` 属性获取
-- `Map` 是 [iterable]](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)的，所以可以直接被迭代
+- `Map` 是 [iterable](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 的，所以可以直接被迭代
 - `Map` 中的 `key` 是有序的。因此，当迭代的时候，一个 `Map` 对象以插入的顺序返回键值
 
 相关链接
