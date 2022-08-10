@@ -4,7 +4,7 @@ export default defineConfig({
   title: 'Blog',
   description: 'personal blog',
   lastUpdated: true,
-
+  base: '/blog/',
   themeConfig: {
     nav: [
       {
