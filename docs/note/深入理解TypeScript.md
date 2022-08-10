@@ -1,13 +1,13 @@
+# 深入理解 TypeScript
+
+[链接](https://jkchao.github.io/typescript-book-chinese/)
+
 ## 写在前面
 
 TypeScript 已经成为大型项目的标配，其提供的静态类型系统，大大增强了代码的可读性以及可维护性
 提供最新和不断发展的 JavaScript 特性，能让我们建立更健壮的组件。
 
-## TypeScript 项目
-
-### 编辑上下文
-
-#### tsconfig.json
+## tsconfig.json
 
 ```json
 {
@@ -59,31 +59,31 @@ TypeScript 已经成为大型项目的标配，其提供的静态类型系统，
 }
 ```
 
-### 声明空间
+## 声明空间
 
-#### 类型声明空间
+### 类型声明空间
 
 1. 定义的类型如 `interface Bar {}` ， `Bar`  并不能作为一个变量来使用，因为它并没有定义在变量声明空间中。
 
-#### 变量声明空间
+### 变量声明空间
 
 1. 类可以作为一个变量使用，而接口或者其他类型声明并不能作为一个变量；
 1. 声明的变量不能作为类型注解使用。
 
-### 模块
+## 模块
 
-#### 全局模块
+### 全局模块
 
 1. 默认情况下，当你开始在一个新的 TypeScirpt 文件中写下代码时，它处于全局命名空间中；
 1. 使用全局变量空间时危险的，因为它会与文件内的代码命名冲突。
 
-#### 文件模块
+### 文件模块
 
 1. 如果 ts 文件根级别位置不含有 `import`  和 `export` ，那么这个文件中的内容是处于全局变量中，如果含有 `import`  或者 `export` ,那么它会在这个文件中创建一个本地作用域；
 1. 模块类型 CommonJS, AMD, ES modules 和其他，AMD 仅能在浏览器工作；
 1. 在项目中可以通过 `declare module 'somePath'`  声明一个全局模块的方式，来解决查找模块路径的问题。
 
-```typescript
+```ts
 // global.d.ts
 declare module 'foo' {
   // some variable declarations
@@ -96,13 +96,11 @@ import * as foo from 'foo'
 // foo 是 { bar: number }
 ```
 
-### 命名空间
+## 命名空间
 
-### 动态导入表达式
+## 动态导入表达式
 
 ## 类型系统
-
-### 概览
 
 1. 在类型声明空间中可用的任何内容都可用作类型注解；
 1. 变量、函数参数和函数返回值的类型注解；
@@ -114,34 +112,34 @@ import * as foo from 'foo'
 1. 属性为多种类型之一时候需要使用联合类型，用 `|`  标记；
 1. 交叉类型、元组类型、类型别名。
 
-### 环境声明
+## 环境声明
 
 1. 如果一个文件有 `.d.ts` ，这意味着每个根级别的声明都必须以 `declare`  关键字作为前缀。
 
-### 接口
+## 接口
 
 1. 接口运行时的影响为 0；
 1. 注解方式分为内联注解和接口形式；
 1. 接口是开放式的；
 1. 类实现接口 `implements` ，类必须遵循接口的对象结构。
 
-### 枚举
+## 枚举
 
-### lib.d.ts
+## lib.d.ts
 
 1. 可以通过使用`declare global { /* global namespace */ }` 从文件模块中进入全局命名空间。
 
-### 函数
+## 函数
 
 1. 可选参数使用 `?`  标记；
 1. 多次声明函数头可实现函数重载；
 1. ts 中的函数重载没有任何运行时开销，只允许你记录希望调用函数的方式。
 
-### 可调用的
+## 可调用的
 
 1. 可以使用类型别名或者接口来表示一个可被调用的类型注解；
 
-```typescript
+```ts
 interface ReturnString {
   (): string
 }
@@ -152,7 +150,7 @@ const bar = foo() //bar 会被推断成一个字符串
 
 2. 可实例化是可调用的一种特殊情况，它使用`new`作为前缀，这意味着你要使用`new`关键字去调用它。
 
-```typescript
+```ts
 interface CallMeWithNewToGetString {
   new (): string
 }
@@ -160,16 +158,16 @@ declare const Foo: CallMeWithNewToGetString
 const bar = new Foo()
 ```
 
-### 类型断言
+## 类型断言
 
 1. ts 允许你覆盖它的断言，类型断言用来告诉编译器你比它更了解这个类型。
 
-### Freshness
+## Freshness
 
 1. Freshness 更严格的对象字面量检查，用来确保对象字面量在结构上类型兼容；
 1. 函数参数传入对象字面量是会使用强校验；
 
-```typescript
+```ts
 function fn(obj: { name: string }) {
   return obj.name
 }
@@ -185,28 +183,28 @@ fn({ name: '1', age: 2 }) //提示错误 'age' does not exist in type '{ name: s
 3. 变量结构类型会误导你认为某些东西接受的数据比它实际的多；
 4. 对象字面量传参只能指定已知的属性，不包含的属性会报错。
 
-### 类型保护
+## 类型保护
 
 1. typeof；
 1. instanceof；
 1. in；
 1. 字面量类型保护。
 
-### 字面量类型
+## 字面量类型
 
 1. 可以使用一个字符串字面量作为一个类型。
 
-```typescript
+```ts
 const foo: 'hello'
 foo = 'bar' //error 'bar'不能赋值给类型 'hello'
 ```
 
-### Readonly
+## Readonly
 
 1. 可以在 `interface` 、 `type`  和 `class`  里使用 `readonly` ;
 1. `Readonly`  映射类型，接受一个泛型 `T` ，用它来把所有属性标记为只读类型；
 
-```typescript
+```ts
 type Foo = {
   bar: number
   bas: number
@@ -234,16 +232,16 @@ fooReadonly.bar = 456 //Error: bar 属性只读
 1.  用于属性
 1.  用于别名，可以修改属性
 
-### 泛型
+## 泛型
 
 1. 设计泛型的关键目的是在成员之间提供有意义的约束，这些成员可以是：
-   1. 类的实例成员
-   1. 类的方法
-   1. 函数参数
-   1. 函数返回值
+   - 类的实例成员
+   - 类的方法
+   - 函数参数
+   - 函数返回值
 2. 如果仅用于单个参数的位置，那么完全没必要使用泛型
 
-```typescript
+```ts
 declare function foo<T>(arg: T): void //仅在一个地方用到了泛型，没必要使用
 
 //改为
@@ -251,9 +249,9 @@ declare function foo<T>(arg: T): void //仅在一个地方用到了泛型，没�
 declare function foo(arg: any): void
 ```
 
-### 类型推断
+## 类型推断
 
-### 类型兼容性
+## 类型兼容性
 
 1. TypeScript 对象是一种结构类型，这意味着只要结构匹配，名称也就无关紧要了；
 1. 枚举与数字类型相互兼容，而来自不同枚举的枚举变量是不兼容的；
@@ -261,16 +259,16 @@ declare function foo(arg: any): void
 1. 类中私有的和受保护的成员必须来自相同的类；
 1. 泛型，当类型参数在被一个成员使用时才会影响兼容性
 
-### Never
+## Never
 
 1. `never`  表示永远不存在的值的类型，而`void`表示没有任何类型
 1. 当一个函数返回空值时，它的返回值为 `void`  类型，但是当一个函数永远不返回时（或者总时抛出错误），它的返回值为 `never`  类型
 
-### 辨识联合类型
+## 辨识联合类型
 
 1. 当类或接口中含有字面量成员时，我们可以用该类的属性来辨析联合类型；
 
-```typescript
+```ts
 interface Square {
   kind: 'square'
   size: number
@@ -297,7 +295,7 @@ function area(s: Shape) {
   }
 ```
 
-### 索引签名
+## 索引签名
 
 1. 索引签名中的名称（如： `{ [ index: string ]: { message: string } }`  里的 `index` ）除了可读性外，并没有什么意义；
 1. 当你声明一个索引签名时，所有明确的成员都必须符合索引签名

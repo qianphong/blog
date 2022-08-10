@@ -69,4 +69,6 @@ console.log('map', map) // { [foo] : 'foo'}
 console.log('weakMap', weakMap) // 空的
 ```
 
-> [WeakMap](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+相关链接
+
+1. https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap

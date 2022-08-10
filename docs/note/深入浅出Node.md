@@ -1,17 +1,17 @@
-# [<<深入浅出 Node.js>>](../files/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode.js.pdf)
+# 深入浅出 Node.js
 
-# 第一章 Node 简介
+## 第一章 Node 简介
 
 ### Chrome 和 Node
 
-![chrome&node](../images/chrome%26node.png)
+![chrome&node](/images/chrome-node.png)
 除了 HTML、WebKit 和显卡这些 UI 相关的没有支持外，Node 的结构和 Chrome 非常相似，都是基于事件驱动的异步架构，浏览器通过事件驱动来服务界面上的交互，Node 通过事件驱动来服务
 
 ---
 
-# 第二章 模块机制
+## 第二章 模块机制
 
-1. Browser、Node、W3C 和 CommonJS 之间的关系。![](../images/关系.png)
+1. Browser、Node、W3C 和 CommonJS 之间的关系。![](/images/relationship.png)
 
 2. 文件扩展名分析。`require()`在分析标识符的过程中，会出现标识符中不包含文件扩展名的情况。CommonJS 模块规范页允许在标识符中不包含文件扩展名，这种情况下，Node 会按`.js`、`.json`、`.node`的次序补足扩展名，依次尝试。
 
@@ -51,6 +51,6 @@
 })
 ```
 
-# 第三章 异步 I/O
+## 第三章 异步 I/O
 
 利用单线程，远离多线程死锁、状态同步等问题，利用异步 I/O，让单线程原理阻塞，以更好地使用 CPU。为了弥补单线程无法利用多核 CPU 的缺点，Node 提供了 `child_process` 的子进程

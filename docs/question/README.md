@@ -2,7 +2,6 @@
 
 - [JavaScript](./JavaScript.md)
 - [TypeScript](./TypeScript.md)
-- [HTML&CSS](./HTML&CSS.md)
 - [Vue](./Vue.md)
 - [React](./React.md)
 - [Vite](./Vite.md)

@@ -74,9 +74,7 @@ type T = [number, string, boolean] // T['length'] 类型是 3
 type U = string[] // T['length'] 类型是 number
 ```
 
-links
-
-> 1.https://juejin.cn/book/7047524421182947366/section/7048282437238915110
+> https://juejin.cn/book/7047524421182947366/section/7048282437238915110
 
 ## 通过以下方法区分可选项
 
@@ -131,4 +129,4 @@ function createLog(source: string, message?: string) {
 }
 ```
 
-> 1. https://jkchao.github.io/typescript-book-chinese/faqs/type-system-behavior.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E5%BE%97%E5%88%B0-supplied-parameters-do-not-match-any-signature-%E7%9A%84%E9%94%99%E8%AF%AF%EF%BC%9F
+> [为什么我会得到 `Supplied parameters do not match any signature` 的错误？](https://jkchao.github.io/typescript-book-chinese/faqs/type-system-behavior.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E5%BE%97%E5%88%B0-supplied-parameters-do-not-match-any-signature-%E7%9A%84%E9%94%99%E8%AF%AF%EF%BC%9F)

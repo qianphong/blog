@@ -22,9 +22,7 @@ const count = inject(countKey)
 const count = inject(countKey, ref(0))
 ```
 
-相关链接
-
-1. https://www.jianshu.com/p/7064c5f8f143
+> https://www.jianshu.com/p/7064c5f8f143
 
 ## 使用类型声明的默认 `props` 值
 
@@ -74,11 +72,11 @@ const openModal = () => {
 </script>
 ```
 
-1. https://staging-cn.vuejs.org/guide/typescript/composition-api.html#typing-component-template-refs
+> https://staging-cn.vuejs.org/guide/typescript/composition-api.html#typing-component-template-refs
 
 ## 自定义修饰符
 
-既有参数又有修饰符的 `v-model` 绑定，生成的 `props` 名将会是`arg + "Modifiers"
+既有参数又有修饰符的 `v-model` 绑定，生成的 `props` 名将会是`arg` + "Modifiers"
 
 ```vue
 <!-- Parent.vue -->
@@ -124,4 +122,4 @@ const computedName = computed({
 </template>
 ```
 
-1. https://staging-cn.vuejs.org/guide/components/events.html#usage-with-v-model
+> https://staging-cn.vuejs.org/guide/components/events.html#usage-with-v-model
