@@ -18,7 +18,7 @@
 - `IDE` - Integrated Development Environment（集成编程开发环境）
 - `JSP` - Java Server Pages（Java 服务器页面）
 - `JVM` - Java Virtual Machine（Java 虚拟机）
-- `JWT` - Json Web Token
+- `JWT` - JSON Web Token
 - `MVC` - Model-View-Controller（软件设计模式，强调分离软件的业务逻辑和显示）
 - `MVVM` - Model-View-Viewmodel
 - `NPM` - Node Package Manager（Node.js 包管理器）
