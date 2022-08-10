@@ -1,24 +1,18 @@
 ---
 layout: home
 
-title: Vite
-titleTemplate: Next Generation Frontend Tooling
+title: Blog
+titleTemplate: Personal blog
 
 hero:
   name: Blog
   text: Personal blog
-  tagline: 随便记录下
-  image:
-    src: /logo-with-shadow.png
-    alt: Vite
+  tagline: 随便记点什么
+  # image:
+  #   src: /logo-with-shadow.png
+  #   alt: Vite
   actions:
     - theme: brand
       text: 笔记
-      link: /note/
-    - theme: alt
-      text: Why Vite?
-      link: /guide/why
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/vitejs/vite
+      link: /note/类型体操通关秘籍
 ---
