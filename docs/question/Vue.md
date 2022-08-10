@@ -22,7 +22,7 @@ const count = inject(countKey)
 const count = inject(countKey, ref(0))
 ```
 
-> https://www.jianshu.com/p/7064c5f8f143
+> [如何在 vue3 中提供一个类型安全的 inject](https://www.jianshu.com/p/7064c5f8f143)
 
 ## 使用类型声明的默认 `props` 值
 
@@ -72,7 +72,7 @@ const openModal = () => {
 </script>
 ```
 
-> https://staging-cn.vuejs.org/guide/typescript/composition-api.html#typing-component-template-refs
+> [为组件模板引用标注类型](https://staging-cn.vuejs.org/guide/typescript/composition-api.html#typing-component-template-refs)
 
 ## 自定义修饰符
 
@@ -122,4 +122,4 @@ const computedName = computed({
 </template>
 ```
 
-> https://staging-cn.vuejs.org/guide/components/events.html#usage-with-v-model
+> [配合 `v-model` 使用](https://staging-cn.vuejs.org/guide/components/events.html#usage-with-v-model)

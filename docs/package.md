@@ -56,8 +56,6 @@
 
 ## JS 框架
 
-- [vue](https://vuejs.org/)
-- [react](https://reactjs.org/)
 - [preact](https://preactjs.com/) - React 的 3kb 轻量化方案，拥有同样的 ES6 API
 - [alpinejs](https://github.com/alpinejs/alpine) - 轻量的响应式、声明式框架，类似 JS 中的 tailwindcss
 - [petite-vue](https://github.com/vuejs/petite-vue) - 同上，使用 vue 语法

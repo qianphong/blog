@@ -9,4 +9,5 @@ Assembly: 汇编
 
 相关链接
 
-> https://developer.mozilla.org/zh-CN/docs/WebAssembly > https://www.zhihu.com/collection/781271863
+> [WebAssembly - MDN](https://developer.mozilla.org/zh-CN/docs/WebAssembly)  
+> [WebAssembly 入门 - windliang 的文章 - 知乎](https://www.zhihu.com/collection/781271863)

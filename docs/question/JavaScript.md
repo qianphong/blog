@@ -17,11 +17,9 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 2. 编译型语言，解释型语言
 3. 编译器，解释器
 
-相关链接：
-
-1. https://juejin.cn/post/6987549240436195364#heading-7
-2. https://segmentfault.com/a/1190000020438413
-3. https://m.html.cn/qa/javascript/11311.html
+> [JavaScript 是如何运行的？解释型语言和编译型语言的差异是什么？](https://juejin.cn/post/6987549240436195364#heading-7)  
+> [JavaScript 是如何运行的？](https://segmentfault.com/a/1190000020438413)  
+> [javascript 是解释型语言吗？](https://m.html.cn/qa/javascript/11311.html)
 
 ## ESModule 和 CommonJS 的区别
 
@@ -30,12 +28,10 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 - commonJS 输出的是值的浅拷贝，esModule 输出值的引用
 - commonJS 具有缓存。在第一次被加载时，会完整运行整个文件并输出一个对象，拷贝（浅拷贝）在内存中。下次加载文件时，直接从内存中取值
 
-相关链接：
-
-1. https://blog.csdn.net/weixin_34406796/article/details/91374453
-2. https://zhuanlan.zhihu.com/p/161015809
-3. https://www.jianshu.com/p/aaf912d7329e
-4. https://juejin.cn/post/6996815121855021087#heading-6
+> [CommonJs 和 ESModule 的 区别整理](https://blog.csdn.net/weixin_34406796/article/details/91374453)  
+> [commonJS 和 ES Module 区别](https://zhuanlan.zhihu.com/p/161015809)  
+> [module.exports 和 export 详解](https://www.jianshu.com/p/aaf912d7329e)  
+> [ES6 Module 相对于 CommonJS 的优势是什么？](https://juejin.cn/post/6996815121855021087#heading-6)
 
 ## `Object` 和 `Map` 的比较
 
@@ -45,9 +41,7 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 - `Map` 是 [iterable](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 的，所以可以直接被迭代
 - `Map` 中的 `key` 是有序的。因此，当迭代的时候，一个 `Map` 对象以插入的顺序返回键值
 
-相关链接
-
-1. https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map
+> [Map - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 ## `Map` 和 `WeakMap` 区别
 
@@ -69,6 +63,4 @@ console.log('map', map) // { [foo] : 'foo'}
 console.log('weakMap', weakMap) // 空的
 ```
 
-相关链接
-
-1. https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
+> [WeakMap - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)

@@ -22,4 +22,4 @@
 
 ## 函数式组件和类组件有何不同？
 
-> https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/
+> [函数式组件与类组件有何不同？](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/)
