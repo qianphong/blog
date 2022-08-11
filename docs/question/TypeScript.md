@@ -82,7 +82,7 @@ type U = string[] // T['length'] 类型是 number
 type Test = {} extends { a?: number } ? true : false
 ```
 
-## `is` 关键字，用于判断一个变量是否属于某特接口/类型
+## `is` 关键字，用于判断参数是否属于某一类型
 
 ```ts
 interface SomeInterface {
