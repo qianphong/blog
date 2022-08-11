@@ -47,7 +47,7 @@ export default defineConfig({
               link: '/note/类型体操通关秘籍',
             },
             {
-              text: '深入浅出Node',
+              text: '深入浅出Node.js',
               link: '/note/深入浅出Node',
             },
             {

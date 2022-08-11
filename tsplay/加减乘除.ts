@@ -1,9 +1,12 @@
 export {}
+/* ----------------------------------- 相等 ----------------------------------- */
 type Equal<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends A
   ? 1
   : 2
   ? true
   : false
+
+/* ----------------------------------- 相加 ----------------------------------- */
 type BuildArr<
   Length extends number,
   Ele = unknown,
@@ -17,6 +20,7 @@ type Add<A extends number, B extends number> = [
 
 type CC = Add<10, 1>
 
+/* ----------------------------------- 相减 ----------------------------------- */
 type Subtract<A extends number, B extends number> = BuildArr<A> extends [
   ...BuildArr<B>,
   ...infer Rest,
@@ -26,6 +30,7 @@ type Subtract<A extends number, B extends number> = BuildArr<A> extends [
 
 type DD = Equal<Subtract<10, 2>, 8>
 
+/* ----------------------------------- 相乘 ----------------------------------- */
 type Multiply<
   A extends number,
   B extends number,
@@ -36,6 +41,7 @@ type Multiply<
 
 type E = Multiply<2, 12>
 
+/* ----------------------------------- 相除 ----------------------------------- */
 type Divide<
   A extends number,
   B extends number,
@@ -44,6 +50,7 @@ type Divide<
 
 type F = Divide<10, 2>
 
+/* ----------------------------------- 大于 ----------------------------------- */
 type GreaterThen<
   A extends number,
   B extends number,
@@ -58,6 +65,7 @@ type GreaterThen<
 
 type G = GreaterThen<4, 2>
 
+/* --------------------------------- 斐波那契数列 --------------------------------- */
 /**
  * 1 1
  * 2 0+1
@@ -75,6 +83,7 @@ type Fibonacci<
 
 type FF = Fibonacci<8>
 
+/* ------------------------------- BEM CSS命名规范 ------------------------------ */
 type BEM<
   Block extends string,
   Element extends string[],
@@ -87,6 +96,7 @@ type ElButton = BEM<
   ['default', 'primary', 'success', 'warning', 'error']
 >
 
+/* ----------------------------------- 组合 ----------------------------------- */
 type Combination<A extends string, B extends string> =
   | A
   | B
