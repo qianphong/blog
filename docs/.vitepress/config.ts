@@ -14,7 +14,7 @@ export default defineConfig({
       },
     ],
     editLink: {
-      pattern: 'https://github.com/qianphong/blog/master/docs/:path',
+      pattern: 'https://github.com/qianphong/blog/edit/master/docs/:path',
       text: '修改',
     },
     nav: [
