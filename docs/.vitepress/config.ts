@@ -28,7 +28,7 @@ export default defineConfig({
             link: '/package',
           },
           {
-            text: '代办',
+            text: '待办',
             link: '/todo',
           },
           {
