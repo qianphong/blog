@@ -6,7 +6,7 @@ export default defineConfig({
   description: 'personal blog',
   lastUpdated: true,
   base: '/blog/',
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: './logo.svg' }]],
   themeConfig: {
     logo: '/logo.svg',
     socialLinks: [
