@@ -2,5 +2,5 @@
   "compilerOptions": {
     "noImplicitThis": true
   },
-  "include": ["type-challenges/**/*.ts"]
+  "include": ["type-challenges/**/*.ts", "tsplay/**"]
 }
