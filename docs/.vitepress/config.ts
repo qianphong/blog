@@ -94,6 +94,10 @@ export default defineConfig({
               link: '/question/Node',
             },
             {
+              text: '网络',
+              link: '/question/Network',
+            },
+            {
               text: 'Vue',
               link: '/question/Vue',
             },
