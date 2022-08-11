@@ -93,4 +93,4 @@ type Combination<A extends string, B extends string> =
   | `${A}${B}`
   | `${B}${A}`
 
-type CC = Combination<'a', 'b'>
+type GG = Combination<'a', 'b'>
