@@ -7,6 +7,16 @@ export default defineConfig({
   lastUpdated: true,
   base: '/blog/',
   themeConfig: {
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/qianphong/blog',
+      },
+    ],
+    editLink: {
+      pattern: 'https://github.com/qianphong/blog/master/docs/:path',
+      text: '修改',
+    },
     nav: [
       {
         text: '笔记',
