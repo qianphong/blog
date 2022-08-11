@@ -1,5 +1,7 @@
 # Glossary
 
+[MDN 术语表](https://developer.mozilla.org/zh-CN/docs/Glossary)
+
 - `AMD` - Asynchronous Module Definition（异步模块定义）
 - `API` - Application Programming Interface（应用编程接口）
 - `AST` - Abstract Syntax Tree（抽象语法树）
