@@ -35,7 +35,7 @@ type Expected2 = {
 // ============= Your Code Here =============
 type Chainable<T = {}> = {
   option<K extends string, V>(
-    key: K,
+    key: K extends keyof T ? never : K,
     value: V,
   ): Chainable<T & { [Key in K]: V }>
   get(): T
