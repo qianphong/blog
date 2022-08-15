@@ -47,3 +47,4 @@
 - `CRUD` - Create Retrieve Update Delete（增删改查）
 - `JIT` - Just In Time（即时编译技术）
 - `IIFE` - Immediately-invoked function expression（立即执行函数表达式）
+- `POSIX` - Portable Operating System Interface X(unix) (可移植的操作系统接口)
