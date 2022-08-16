@@ -71,6 +71,10 @@ export default defineConfig({
               link: '/note/Vue.js设计与实现',
             },
             {
+              text: '实现一个 Web 地图',
+              link: '/note/实现一个Web地图',
+            },
+            {
               text: '集成项目管理工程师',
               link: '/note/集成项目管理工程师',
             },

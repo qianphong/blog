@@ -16,3 +16,8 @@ hero:
       text: 笔记
       link: /note/类型体操通关秘籍
 ---
+
+<script setup>
+import Countdown from './components/Countdown.vue'
+</script>
+<Countdown />
