@@ -19,19 +19,20 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 
 > [JavaScript 是如何运行的？解释型语言和编译型语言的差异是什么？](https://juejin.cn/post/6987549240436195364#heading-7)  
 > [JavaScript 是如何运行的？](https://segmentfault.com/a/1190000020438413)  
-> [javascript 是解释型语言吗？](https://m.html.cn/qa/javascript/11311.html)
+> [JavaScript 是解释型语言吗？](https://m.html.cn/qa/javascript/11311.html)
 
 ## ESModule 和 CommonJS 的区别
 
-- ESM 采用静态的加载方式，也就是模块中导入导出的依赖关系在代码编译时就确定下来，因此采用 ESM 进行代码设计时可以在编译时通过 ESLint 快速定位出模块的词法和语法错误以及类型信息等，CommonJS 相对与 ESM 在加载模块的方式上存在明显的差异，是因为 CommonJS 在运行时进行加载方式的动态解析，在运行阶段才能确定导入导出关系，因此无法进行静态编译优化和类型检查，和 Tree Sharking
-
-- commonJS 输出的是值的浅拷贝，esModule 输出值的引用
+- ESM 的模块不是对象，`import` 命令会被 JavaScript 引擎静态分析，在编译时就引入模块代码，而不是在代码运行时加载，所以无法实现条件加载；
+- ESM 采用静态的加载方式，也就是模块中导入导出的依赖关系在代码编译时就确定下来，因此采用 ESM 进行代码设计时可以在编译时通过 ESLint 快速定位出模块的词法和语法错误以及类型信息等；
+- CommonJS 相对与 ESM 在加载模块的方式上存在明显的差异，是因为 CommonJS 在运行时进行加载方式的动态解析，在运行阶段才能确定导入导出关系，因此无法进行静态编译优化和类型检查，和 Tree Sharking；
+- commonJS 输出的是值的浅拷贝，ESModule 输出值的引用；
 - commonJS 具有缓存。在第一次被加载时，会完整运行整个文件并输出一个对象，拷贝（浅拷贝）在内存中。下次加载文件时，直接从内存中取值
 
 > [CommonJs 和 ESModule 的 区别整理](https://blog.csdn.net/weixin_34406796/article/details/91374453)  
 > [commonJS 和 ES Module 区别](https://zhuanlan.zhihu.com/p/161015809)  
 > [module.exports 和 export 详解](https://www.jianshu.com/p/aaf912d7329e)  
-> [ES6 Module 相对于 CommonJS 的优势是什么？](https://juejin.cn/post/6996815121855021087#heading-6)
+> [ES6 Module 相对于 CommonJS 的优势是什么？](https://juejin.cn/post/6996815121855021087#heading-6) > [前端模块化——彻底搞懂 AMD、CMD、UMD、ESM 和 CommonJS - vscing 的文章 - 知乎](https://zhuanlan.zhihu.com/p/467991875)
 
 ## `Object` 和 `Map` 的比较
 
