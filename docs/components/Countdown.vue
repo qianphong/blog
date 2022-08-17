@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onUnmounted } from 'vue'
+import { ref, onUnmounted, onMounted } from 'vue'
 
 const deadline = 1664467200000 // dayjs('2022-09-30')
 const tip = ref(getStr())
@@ -13,10 +13,12 @@ function getStr() {
 
   return { d, h, m, s }
 }
-
-const timer = setInterval(() => {
-  tip.value = getStr()
-}, 1000)
+let timer: number
+onMounted(() => {
+  timer = setInterval(() => {
+    tip.value = getStr()
+  }, 1000)
+})
 
 onUnmounted(() => {
   clearInterval(timer)
