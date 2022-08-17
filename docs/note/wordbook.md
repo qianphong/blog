@@ -1,12 +1,12 @@
 - manner
-- similar
+- similar - 相似的
 - capability
 - indentical
-- canonical
+- canonical - 典型的
 - conclusions
-- flawed
-- negligible
-- optimization
-- strategy
+- flawed - 有缺陷的
+- negligible - 微不足道的，不重要的
+- optimization - 最优
+- strategy - 策略、战略
 - tutorial
-- adopter
+- adopter - 采用者
