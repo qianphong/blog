@@ -4,6 +4,7 @@
 
 - `AMD` - Asynchronous Module Definition（异步模块定义）
 - `API` - Application Programming Interface（应用编程接口）
+- `ABI` - Application Binary Interface （应用程序二进制接口）
 - `AST` - Abstract Syntax Tree（抽象语法树）
 - `BFC` - Block Formatting Context（块级格式化上下文）
 - `CDN` - Content Delivery Network（内容分发网络）
