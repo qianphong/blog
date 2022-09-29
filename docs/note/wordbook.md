@@ -10,3 +10,5 @@
 - strategy - 策略、战略
 - tutorial
 - adopter - 采用者
+- satisfies
+- terms

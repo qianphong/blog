@@ -1,6 +1,6 @@
 # 待归档
 
-## 网页引用的资源去掉协议部分（https:和 http）
+## 网页引用的资源去掉协议部分（ https: 和 http ）
 
 ```diff
 - <script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
@@ -30,6 +30,6 @@ const reg = /\p{Script=han}/u
 
 ## Vitepress build 成功后进程还挂起
 
-因为再 SFC 的 `<script setup>` 中使用了 `setInterval`，导致进程一直被挂起，解决方案就是将定时器包裹在 `if(typeof window !== 'undefined')` 或者再 `onMounted` 中。
+因为在 SFC 的 `<script setup>` 中使用了 `setInterval`，导致进程一直被挂起，解决方案就是将定时器包裹在 `if(typeof window !== 'undefined')` 或者在 `onMounted` 中。
 
 > [vuejs/vitepress#562](https://github.com/vuejs/vitepress/issues/562)
