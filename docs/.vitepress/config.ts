@@ -59,6 +59,10 @@ export default defineConfig({
               link: '/note/类型体操通关秘籍',
             },
             {
+              text: '前端调试通关秘籍',
+              link: '/note/前端调试通关秘籍',
+            },
+            {
               text: '深入浅出Node.js',
               link: '/note/深入浅出Node',
             },
