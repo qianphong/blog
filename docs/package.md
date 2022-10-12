@@ -32,7 +32,7 @@
 - [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa)
 - [vite-plugin-vue-layouts](https://github.com/johncampionjr/vite-plugin-vue-layouts)
 - [vite-plugin-windicss](https://github.com/antfu/vite-plugin-windicss)
-- [more 👉](https://github.com/vitejs/awesome-vite)
+- [more... 👉](https://github.com/vitejs/awesome-vite)
 
 ## Webpack
 
