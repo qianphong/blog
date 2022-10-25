@@ -79,6 +79,10 @@ export default defineConfig({
               link: '/note/实现一个Web地图',
             },
             {
+              text: '看看 SolidJS',
+              link: '/note/看看SolidJS',
+            },
+            {
               text: '集成项目管理工程师',
               link: '/note/集成项目管理工程师',
             },
