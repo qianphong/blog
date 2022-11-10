@@ -55,6 +55,10 @@ export default defineConfig({
         {
           items: [
             {
+              text: 'Nuxt',
+              link: '/note/Nuxt.md',
+            },
+            {
               text: '类型体操通关秘籍',
               link: '/note/类型体操通关秘籍',
             },
