@@ -33,3 +33,7 @@ const reg = /\p{Script=han}/u
 因为在 SFC 的 `<script setup>` 中使用了 `setInterval`，导致进程一直被挂起，解决方案就是将定时器包裹在 `if(typeof window !== 'undefined')` 或者在 `onMounted` 中。
 
 > [vuejs/vitepress#562](https://github.com/vuejs/vitepress/issues/562)
+
+## 浏览器环境 Get 请求不能携带 body
+
+Fetch API 规范中明确说明了 GET 请求不能携带 body，因此在浏览器环境中，如果使用 Fetch API 发送 GET 请求，即使设置了 body，也不会被发送出去。
