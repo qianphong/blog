@@ -29,7 +29,7 @@ JavaScript 是一门解释型的动态语言。有些程序设计语言将编译
 - commonJS 输出的是值的浅拷贝，ESModule 输出值的引用；
 - commonJS 具有缓存。在第一次被加载时，会完整运行整个文件并输出一个对象，拷贝（浅拷贝）在内存中。下次加载文件时，直接从内存中取值
 
-> [CommonJs 和 ESModule 的 区别整理](https://blog.csdn.net/weixin_34406796/article/details/91374453)  
+> [CommonJs 和 ESModule 的区别整理](https://blog.csdn.net/weixin_34406796/article/details/91374453)  
 > [commonJS 和 ES Module 区别](https://zhuanlan.zhihu.com/p/161015809)  
 > [module.exports 和 export 详解](https://www.jianshu.com/p/aaf912d7329e)  
 > [ES6 Module 相对于 CommonJS 的优势是什么？](https://juejin.cn/post/6996815121855021087#heading-6) > [前端模块化——彻底搞懂 AMD、CMD、UMD、ESM 和 CommonJS - vscing 的文章 - 知乎](https://zhuanlan.zhihu.com/p/467991875)

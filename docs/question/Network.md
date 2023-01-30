@@ -92,7 +92,7 @@ encodeURIComponent(test) // 'https%3A%2F%2F%E6%B5%8B%E8%AF%95.com%3Fq%3D%E5%85%B
 
 #### 强缓存
 
-1. Expires: response header 里的过期时间，浏览器在加载资源是，如果在这个过期时间内则命中强缓存。
+1. Expires: response header 里的过期时间，浏览器在加载资源时，如果是在这个过期时间内，则命中强缓存。
 2. Cache-Control: 当值设为 `max-age=300`，则代表在这个请求正确返回时间（浏览器也会记录下来）的 300 秒内再次加载资源，就会命中缓存。
 
 _区别：Expires 是 http1.0 的产物，Cache-Control 是 http1.1 的产物，两者同时存在的话，Cache-Control 的优先级高于 Expires，Expires 其实是过期的产物，现阶段它的存在只是一种兼容的写法_
@@ -104,7 +104,7 @@ _区别：Expires 是 http1.0 的产物，Cache-Control 是 http1.1 的产物，
    浏览器在下一次加载资源向服务器发送请求时，会将上一次返回的 ETag 值放在 request header 的 If-None-Match 中，服务器接受到 If-None-Match 的值后，会拿来跟该资源的 ETag 值做比较，如果相同，则表示资源文件没有发生改变，命中协商缓存。
 
 2. Last-Modified 和 If-Modified-Since
-   Last-Modified 是该资源文件最后一次更改时间，服务器会在 response header 里返回，同时浏览器会将这个值保存起来，下一次发送请求时，放在 reques-header 里的 If-Modified-Since 里，服务器在接收到后也会做对比，如果相同则命中协商缓存。
+   Last-Modified 是该资源文件最后一次更改时间，服务器会在 response header 里返回，同时浏览器会将这个值保存起来，下一次发送请求时，放在 request header 里的 If-Modified-Since 里，服务器在接收到后也会做对比，如果相同则命中协商缓存。
 
    _在精确度上，ETag 要优与 Last-Modified，Last-Modified 的时间单位是秒，如果某个文件在 1 秒内改变了多次，那么他们的 Last-Modified 其实并没有体现出来修改，但是 ETag 每次都会改变确保了精度，在性能上，ETag 要逊于 Last-Modified，毕竟 Last-Modified 只需要记录时间，而 ETag 需要服务器通过算法来计算出一个 hash 值，在优先级上，服务器校验优先考虑 ETag。_
 
