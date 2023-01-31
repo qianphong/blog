@@ -119,7 +119,7 @@ function foo(x: SomeInterface | SomeOtherInterface) {
 
 /* ---------------------------------- 函数重载 ---------------------------------- */
 function createLog(message: string): number
-function createLog(source: string, message: string) //
+function createLog(source: string, message: string): number //
 function createLog(source: string, message?: string): number {
   return 0
 }

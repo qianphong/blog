@@ -76,3 +76,12 @@ console.log('weakMap', weakMap) // 空的
 2. 为步骤 1 新创建的对象添加属性 `__proto__`，将该属性链接至构造函数的原型对象；
 3. 将步骤 1 新创建的对象作为 `this` 的上下文；
 4. 如果该函数没有返回对象，则返回 `this`。
+
+## `import()` 和 `import` 的区别
+
+- `import` 是静态导入，`import()` 是动态导入
+- `import` 只能在模块的顶层使用，`import()` 可以在任何地方使用
+- `import` 是编译时执行，`import()` 是运行时执行，也即什么时候执行到什么时候加载，参数也可以是动态的。
+- `import` 可建立静态分析的依赖关系，`import()` 不能
+
+> [import - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
