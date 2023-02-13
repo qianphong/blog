@@ -29,6 +29,10 @@ export default defineConfig({
         link: '/question/JavaScript',
       },
       {
+        text: '面试',
+        link: '/interview/HTML',
+      },
+      {
         text: '其他',
         items: [
           {
@@ -148,6 +152,17 @@ export default defineConfig({
             {
               text: '手写代码',
               link: '/question/手写代码',
+            },
+          ],
+        },
+      ],
+      '/interview/': [
+        {
+          text: '面试',
+          items: [
+            {
+              text: 'HTML',
+              link: '/interview/HTML',
             },
           ],
         },
