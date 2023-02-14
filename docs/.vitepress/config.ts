@@ -164,6 +164,10 @@ export default defineConfig({
               text: 'HTML',
               link: '/interview/HTML',
             },
+            {
+              text: 'CSS',
+              link: '/interview/CSS',
+            },
           ],
         },
       ],
