@@ -168,6 +168,10 @@ export default defineConfig({
               text: 'CSS',
               link: '/interview/CSS',
             },
+            {
+              text: 'JavaScript',
+              link: '/interview/JavaScript',
+            },
           ],
         },
       ],
