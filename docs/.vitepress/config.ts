@@ -28,10 +28,10 @@ export default defineConfig({
         text: '问答',
         link: '/question/JavaScript',
       },
-      {
-        text: '面试',
-        link: '/interview/HTML',
-      },
+//       {
+//         text: '面试',
+//         link: '/interview/HTML',
+//       },
       {
         text: '其他',
         items: [
