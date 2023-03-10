@@ -8,6 +8,59 @@
 
 函数组件和类组件
 
-> 对于类组件来说，底层只需要实例化一次，实例中保存了组件的 `state` 等状态，对于每一次更新只需要调用 `render` 方法以及对应的声明周期即可。但是在函数组件中，**每一次更新都是一次新的函数执行**，一次函数组件的更新，里面的变量都会重新声明。
+> 对于类组件来说，底层只需要实例化一次，实例中保存了组件的 `state` 等状态，对于每一次更新只需要调用 `render` 方法以及对应的声明周期即可。但是在函数组件中，**每一次更新都是一次新的函数执行**，一次函数组件的更新，里面的变量都会重新声明。  
+> 为了让函数组件可以保存一些状态，执行一些副作用钩子，React Hooks 应运而生。
+
+组件间通信方式
+
+1. props 和 callback
+2. ref 方式
+3. 状态管理库，如：Redux、Mobx
+4. Context
+5. eventBus
 
 ## State
+
+## Memo
+
+React 对 `Memo` 类型的数据会比较其 `props`，而不是引用地址不一样就重新渲染
+
+## 函数组件 Ref
+
+通过 `useRef` 来获取函数组件的 `ref`，组件中使用 `forwardRef` 来获取父组件传递的 `ref`，组件内部使用 `useImperativeHandle` 来暴露 `ref`。
+
+```tsx
+import React from 'react'
+
+type ChildProps = {}
+type ChildRef = {
+  setName: (name: string) => void
+}
+
+const Child = React.forwardRef<ChildRef, ChildProps>((props, ref) => {
+  const [name, setName] = useState('')
+
+  React.useImperativeHandle(ref, () => ({ setName }))
+
+  return (
+    <div>
+      <div>{props.name}</div>
+      <button onClick={props.handleClick}>click</button>
+    </div>
+  )
+})
+
+const Parent = () => {
+  const childRef = useRef<ChildRef>(null)
+
+  const handleClick = () => {
+    childRef.current?.setName('new name')
+  }
+
+  return (
+    <div>
+      <Child ref={childRef} />
+    </div>
+  )
+}
+```
