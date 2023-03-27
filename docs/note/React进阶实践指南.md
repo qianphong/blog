@@ -79,3 +79,14 @@ const Parent = () => {
 1. 从 diff children 看 key 的使用
 
 合理的使用 key 有助于能精确的找到用于新节点复用的老节点。
+
+## 不要在 hooks 的参数中使用函数或者 `new` 实例
+
+```tsx
+const list = useRef(Array.from({ length: 1000 }).map(() => Date.now()))
+// 不要使用函数，或者 new 实例，否则每次都会重新执行
+const list = useRef<number[]>()
+if (!list.current) {
+  list.current = Array.from({ length: 1000 }).map(() => Date.now())
+}
+```
