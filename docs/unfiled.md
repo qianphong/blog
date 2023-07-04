@@ -37,3 +37,9 @@ const reg = /\p{Script=han}/u
 ## 浏览器环境 Get 请求不能携带 body
 
 Fetch API 规范中明确说明了 GET 请求不能携带 body，因此在浏览器环境中，如果使用 Fetch API 发送 GET 请求，即使设置了 body，也不会被发送出去。
+
+## 软著导出源码
+
+```bash
+find . -name '*.vue' -o -name '*.ts' ! -path "./node_modules/*" | xargs cat |head -n 3000 > sourcecode.txt
+```
