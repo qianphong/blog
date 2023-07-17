@@ -49,3 +49,10 @@
 - `JIT` - Just In Time（即时编译技术）
 - `IIFE` - Immediately-invoked function expression（立即执行函数表达式）
 - `POSIX` - Portable Operating System Interface X(unix) (可移植的操作系统接口)
+
+## Nest
+
+- `IOC` - Inversion of Control（控制反转）
+- `DI` - Dependency Injection（依赖注入）
+- `AOP` - Aspect Oriented Programming（面向切面编程）
+- `MVC` - Model-View-Controller（软件设计模式，强调分离软件的业务逻辑和显示）
