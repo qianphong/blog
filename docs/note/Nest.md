@@ -34,10 +34,10 @@ body 中的
 6. `@Global` : 全局模块
 7. `@Catch` : 声明 exception filter 处理的 exception 类型
 
-8. `@UseFilters` : 过滤器
-9. `@UseGuards` : 守卫
-10. `@UseInterceptors` : 拦截器
-11. `@UsePipes` : 管道
+8. `@UseGuards` : 守卫
+9. `@UseInterceptors` : 拦截器
+10. `@UsePipes` : 管道
+11. `@UseFilters` : 过滤器
 
 12. `@Param` : 获取 url param
 13. `@Query` : 获取 query
