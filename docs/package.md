@@ -24,6 +24,14 @@
 - [npm-run-all](https://github.com/mysticatea/npm-run-all) - 用于并行或顺序运行多个 NPM 脚本的 CLI 工具。
 - [semver](https://github.com/npm/node-semver) - 语义化版本号管理的 NPM 库
 
+## Nest 开发
+
+- [nestjs]
+- [multer]
+- [class-validator]
+- [class-transformer]
+- [sharp]
+
 ## Vite
 
 - [vite-ssg](https://github.com/antfu/vite-ssg) - Vite 的服务器端生成
