@@ -1,13 +1,18 @@
 import { defineConfig } from 'vitepress'
 import { globSync } from 'glob'
+// import slash from 'slash'
+import path from 'path'
 
 const notes = globSync('./docs/note/*.md')
   .map(filePath => {
+    console.log(filePath, path.normalize(filePath))
     return filePath.split('\\').pop()?.replace(/\.md$/, '')
   })
   .map(text => {
     return { text, link: `/note/${text}` }
   })
+console.log(notes)
+
 const question = globSync('./docs/question/*.md')
   .map(filePath => {
     return filePath.split('\\').pop()?.replace(/\.md$/, '')
@@ -95,14 +100,3 @@ export default defineConfig({
     },
   },
 })
-
-function slash(path: string) {
-  const isExtendedLengthPath = /^\\\\\?\\/.test(path)
-  const hasNonAscii = /[^\u0000-\u0080]+/.test(path)
-
-  if (isExtendedLengthPath || hasNonAscii) {
-    return path
-  }
-
-  return path.replace(/\\/g, '/')
-}
