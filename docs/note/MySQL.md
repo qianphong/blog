@@ -91,7 +91,6 @@ CREATE TABLE student(
 
 ```sql
 -- 条件查询
--- 条件查询
 SELECT `name` as '姓名', `age` as "年龄" FROM student WHERE age >= 20;
 -- AND 多个条件
 SELECT * FROM student WHERE gender='男' AND score >= 90;

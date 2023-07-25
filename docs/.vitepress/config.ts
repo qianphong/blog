@@ -1,4 +1,20 @@
 import { defineConfig } from 'vitepress'
+import { globSync } from 'glob'
+
+const notes = globSync('./docs/note/*.md')
+  .map(filePath => {
+    return filePath.split('\\').pop()?.replace(/\.md$/, '')
+  })
+  .map(text => {
+    return { text, link: `/note/${text}` }
+  })
+const question = globSync('./docs/question/*.md')
+  .map(filePath => {
+    return filePath.split('\\').pop()?.replace(/\.md$/, '')
+  })
+  .map(text => {
+    return { text, link: `/question/${text}` }
+  })
 
 export default defineConfig({
   lang: 'zh',
@@ -22,16 +38,16 @@ export default defineConfig({
     nav: [
       {
         text: '笔记',
-        link: '/note/类型体操通关秘籍',
+        link: notes[0].link,
       },
       {
         text: '问答',
-        link: '/question/JavaScript',
+        link: question[0].link,
       },
-//       {
-//         text: '面试',
-//         link: '/interview/HTML',
-//       },
+      //       {
+      //         text: '面试',
+      //         link: '/interview/HTML',
+      //       },
       {
         text: '其他',
         items: [
@@ -55,107 +71,8 @@ export default defineConfig({
       },
     ],
     sidebar: {
-      '/note/': [
-        {
-          items: [
-            {
-              text: 'Nuxt',
-              link: '/note/Nuxt.md',
-            },
-            {
-              text: '类型体操通关秘籍',
-              link: '/note/类型体操通关秘籍',
-            },
-            {
-              text: '前端内参',
-              link: '/note/前端内参',
-            },
-            {
-              text: '深入浅出Node.js',
-              link: '/note/深入浅出Node',
-            },
-            {
-              text: 'React进阶实践指南',
-              link: '/note/React进阶实践指南',
-            },
-            {
-              text: '深入理解TypeScript',
-              link: '/note/深入理解TypeScript',
-            },
-            {
-              text: 'Vue.js设计与实现',
-              link: '/note/Vue.js设计与实现',
-            },
-            {
-              text: '前端调试通关秘籍',
-              link: '/note/前端调试通关秘籍',
-            },
-            {
-              text: '实现一个 Web 地图',
-              link: '/note/实现一个Web地图',
-            },
-            {
-              text: '看看 SolidJS',
-              link: '/note/看看SolidJS',
-            },
-            {
-              text: '集成项目管理工程师',
-              link: '/note/集成项目管理工程师',
-            },
-          ],
-        },
-      ],
-      '/question/': [
-        {
-          text: '问答',
-          items: [
-            {
-              text: 'JavaScript',
-              link: '/question/JavaScript',
-            },
-            {
-              text: 'TypeScript',
-              link: '/question/TypeScript',
-            },
-            {
-              text: 'Node.js',
-              link: '/question/Node',
-            },
-            {
-              text: '网络',
-              link: '/question/Network',
-            },
-            {
-              text: 'Vue',
-              link: '/question/Vue',
-            },
-            {
-              text: 'React',
-              link: '/question/React',
-            },
-            {
-              text: 'Vite',
-              link: '/question/Vite',
-            },
-            {
-              text: 'Webpack',
-              link: '/question/Webpack',
-            },
-            {
-              text: 'WebAssembly',
-              link: '/question/WebAssembly',
-            },
-            {
-              text: '计算机基础',
-              link: '/question/计算机基础',
-            },
-            {
-              text: '手写代码',
-              link: '/question/手写代码',
-            },
-          ],
-        },
-      ],
+      '/note/': notes,
+      '/question/': question,
       '/interview/': [
         {
           text: '面试',
@@ -178,3 +95,14 @@ export default defineConfig({
     },
   },
 })
+
+function slash(path: string) {
+  const isExtendedLengthPath = /^\\\\\?\\/.test(path)
+  const hasNonAscii = /[^\u0000-\u0080]+/.test(path)
+
+  if (isExtendedLengthPath || hasNonAscii) {
+    return path
+  }
+
+  return path.replace(/\\/g, '/')
+}
