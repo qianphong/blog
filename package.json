@@ -12,11 +12,13 @@
   "license": "MIT",
   "dependencies": {
     "glob": "^10.3.3",
+    "normalize-path": "^3.0.0",
     "slash": "^5.1.0",
     "vitepress": "1.0.0-beta.6",
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@types/node": "^18.6.3"
+    "@types/node": "^18.6.3",
+    "@types/normalize-path": "^3.0.0"
   }
 }

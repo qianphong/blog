@@ -1,12 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { globSync } from 'glob'
-// import slash from 'slash'
-import path from 'path'
+import normalize from 'normalize-path'
 
 const notes = globSync('./docs/note/*.md')
   .map(filePath => {
-    console.log(filePath, path.normalize(filePath))
-    return filePath.split('\\').pop()?.replace(/\.md$/, '')
+    return normalize(filePath).split('/').pop()?.replace(/\.md$/, '')
   })
   .map(text => {
     return { text, link: `/note/${text}` }
@@ -15,7 +13,7 @@ console.log(notes)
 
 const question = globSync('./docs/question/*.md')
   .map(filePath => {
-    return filePath.split('\\').pop()?.replace(/\.md$/, '')
+    return normalize(filePath).split('/').pop()?.replace(/\.md$/, '')
   })
   .map(text => {
     return { text, link: `/question/${text}` }
