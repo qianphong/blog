@@ -130,3 +130,64 @@ function createLog(source: string, message?: string) {
 ```
 
 > [为什么我会得到 `Supplied parameters do not match any signature` 的错误？](https://jkchao.github.io/typescript-book-chinese/faqs/type-system-behavior.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E5%BE%97%E5%88%B0-supplied-parameters-do-not-match-any-signature-%E7%9A%84%E9%94%99%E8%AF%AF%EF%BC%9F)
+
+## 对象内的方法转换成`exec`执行
+
+```ts
+const methods = {
+  foo(params: string) {
+    console.log('foo')
+    return +params
+  },
+  bar() {
+    console.log('bar')
+  },
+  other: {
+    baz() {
+      console.log('baz')
+      return 'baz'
+    },
+  },
+}
+
+// TODO：实现 exec 方法，要能够有类型提示和返回值类型
+// exec('foo') // foo
+```
+
+实现 exec
+
+```ts
+import { get } from 'lodash-es'
+
+type Func = (...args: any[]) => any
+type Recordable<T = any> = Record<string, T>
+
+type EventNames<
+  T extends Recordable,
+  P extends string = '',
+  K extends keyof T = keyof T,
+> = K extends K
+  ? T[K] extends Func
+    ? `${P}${K & string}`
+    : T[K] extends Recordable
+    ? EventNames<T[K], `${P}${K & string}:`>
+    : never
+  : never
+
+type GetHandler<
+  T extends Recordable,
+  P extends string,
+> = P extends `${infer S}:${infer Nest}`
+  ? GetHandler<T[S], Nest>
+  : T[P] extends Func
+  ? T[P]
+  : never
+
+// 执行渲染进程暴露的API
+export function exec<
+  N extends EventNames<BridgeAPI>,
+  H extends Func = GetHandler<BridgeAPI, N>,
+>(name: N, ...args: Parameters<H>): ReturnType<H> {
+  return get(window[EXPOSE_GLOBAL_NAME], name.split(':'))?.(...args)
+}
+```
