@@ -236,3 +236,9 @@ UPDATE `test`.`students` SET `name` = '李四', `age` = 20 WHERE `id` = 1;
 ```sql
 DELETE FROM `test`.`students` WHERE `id` = 1;
 ```
+
+### `INNER JOIN`、`LEFT JOIN`、`RIGHT JOIN`
+
+- `INNER JOIN` 返回两个表中匹配的行；
+- `LEFT JOIN` 返回左表中的所有行，并与右表进行匹配；
+- `RIGHT JOIN` 返回右表中的所有行，并于左表进行匹配；
