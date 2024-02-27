@@ -24,7 +24,7 @@ export default defineConfig({
   title: 'Blog',
   description: 'personal blog',
   lastUpdated: true,
-  base: '/blog/',
+  // base: '/blog/',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: './logo.svg' }]],
   themeConfig: {
     logo: '/logo.svg',
