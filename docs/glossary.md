@@ -49,6 +49,7 @@
 - `JIT` - Just In Time（即时编译技术）
 - `IIFE` - Immediately-invoked function expression（立即执行函数表达式）
 - `POSIX` - Portable Operating System Interface X(unix) (可移植的操作系统接口)
+- `REPL` - Read-Eval-Print Loop (交互式编程环境，通常用于解释性编程语言)
 
 ## Nest
 
