@@ -7,13 +7,11 @@
 - `ABI` - Application Binary Interface （应用程序二进制接口）
 - `AST` - Abstract Syntax Tree（抽象语法树）
 - `BFC` - Block Formatting Context（块级格式化上下文）
-- `CDN` - Content Delivery Network（内容分发网络）
 - `CLI` - Command-Line Interface（命令行界面）
 - `CMD` - Common Module Definition（公共模块定义）
 - `CORS` - Cross-Origin Resource Sharing（跨域资源共享）
 - `CSP` - Content Security Policy（内容安全策略）
 - `CSRF` - Cross-site request forgery（跨站伪造请求）
-- `DNS` - Domain Name System（域名系统）
 - `ESM` - ECMAScript Module
 - `GUI` - Graphical User Interface（图形用户界面）
 - `HMR` - Hot Module Replacement（热重载）
@@ -50,6 +48,25 @@
 - `IIFE` - Immediately-invoked function expression（立即执行函数表达式）
 - `POSIX` - Portable Operating System Interface X(unix) (可移植的操作系统接口)
 - `REPL` - Read-Eval-Print Loop (交互式编程环境，通常用于解释性编程语言)
+
+## 网络
+
+- `SSL` - Secure Sockets Layer（安全套接层）
+- `TCP` - Transmission Control Protocol（传输控制协议）
+- `FTP` - File Transfer Protocol（文件传输协议）
+- `HTTP` - Hypertext Transfer Protocol（超文本传输协议）
+- `UDP` - User Datagram Protocol（用户数据报协议）
+- `IP` - Internet Protocol（互联网协议）
+- `IPTV` - Internet Protocol Television（基于互联网协议的电视）
+- `TLS` - Transport Layer Security（传输层安全性协议）
+- `CDN` - Content Delivery Network（内容分发网络）
+- `DNS` - Domain Name System（域名系统）
+- `ACL` - Access Control List（访问控制列表）
+- `RBAC` - Role-Based Access Control（基于角色的访问控制）
+- `DOS` - Denial of Service（拒绝服务攻击）
+- `TTL` - Time To Live（生存时间，用于限制数据包在网络中的存活时间）
+- `TTFB` - Time To Frist Byte（首字节时间）
+- `VPN` - Virtual Private Network（虚拟专用网络）
 
 ## Nest
 
