@@ -52,13 +52,13 @@
 ## 网络
 
 - `SSL` - Secure Sockets Layer（安全套接层）
+- `TLS` - Transport Layer Security（传输层安全性协议）
 - `TCP` - Transmission Control Protocol（传输控制协议）
+- `UDP` - User Datagram Protocol（用户数据报协议）
 - `FTP` - File Transfer Protocol（文件传输协议）
 - `HTTP` - Hypertext Transfer Protocol（超文本传输协议）
-- `UDP` - User Datagram Protocol（用户数据报协议）
 - `IP` - Internet Protocol（互联网协议）
 - `IPTV` - Internet Protocol Television（基于互联网协议的电视）
-- `TLS` - Transport Layer Security（传输层安全性协议）
 - `CDN` - Content Delivery Network（内容分发网络）
 - `DNS` - Domain Name System（域名系统）
 - `ACL` - Access Control List（访问控制列表）
