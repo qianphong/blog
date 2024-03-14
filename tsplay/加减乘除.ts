@@ -1,6 +1,6 @@
 export {}
 /* ----------------------------------- 相等 ----------------------------------- */
-type Equal<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends A
+type Equal<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B
   ? 1
   : 2
   ? true
@@ -62,7 +62,7 @@ type GreaterThen<
   : CountArr['length'] extends A
   ? false
   : GreaterThen<A, B, [...CountArr, unknown]>
-
+// 中间数先触碰到谁（与谁相等)，谁就小（首先排除两个数相等）
 type G = GreaterThen<4, 2>
 
 /* --------------------------------- 斐波那契数列 --------------------------------- */

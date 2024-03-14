@@ -78,7 +78,7 @@ TypeScript 已经成为大型项目的标配，其提供的静态类型系统，
 
 ### 文件模块
 
-1. 如果 TS 文件根级别位置不含有 `import`  和 `export` ，那么这个文件中的内容是处于全局变量中，如果含有 `import`  或者 `export` ，那么它会在这个文件中创建一个本地作用域；
+1. 如果 TS 文件根级别位置不含有 `import` 和 `export` ，那么这个文件中的内容是处于全局变量中，如果含有 `import` 或者 `export` ，那么它会在这个文件中创建一个本地作用域；
 1. 模块类型 CommonJS、 AMD、 ES modules 和其他，AMD 仅能在浏览器工作；
 1. 在项目中可以通过 `declare module 'somePath'`  声明一个全局模块的方式，来解决查找模块路径的问题。
 

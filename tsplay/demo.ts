@@ -126,3 +126,15 @@ function createLog(source: string, message?: string): number {
 
 createLog('message') // OK
 createLog('source', 'message') // ERROR: Supplied parameters do not match any signature
+
+function overload(obj: Record<string, any>, key: string, fn: Function) {
+  const oldMethod = obj[key] as Function | undefined
+
+  obj[key] = function () {
+    if (arguments.length === fn.length) {
+      return fn.apply(this, arguments)
+    } else if (typeof oldMethod === 'function') {
+      return oldMethod.apply(this.arguments)
+    }
+  }
+}
