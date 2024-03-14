@@ -10,7 +10,7 @@
 
 ## 描述 UI
 
-- 组件名称必须以大写字母开头；
+- 组件名称必须以大写字母开头
 - 万物皆组件；[🔗](https://react.docschina.org/learn/your-first-component#components-all-the-way-down)
 - 不要嵌套组件的定义 [🔗](https://react.docschina.org/learn/your-first-component#nesting-and-organizing-components)
 - 默认导出还是具名导出? [🔗](https://react.docschina.org/learn/importing-and-exporting-components#default-vs-named-exports)
@@ -23,10 +23,10 @@
 
 ### JSX 中使用 JavaScript
 
-- JSX 引号内的值会作为字符串传递给属性。
-- 大括号让你可以将 JavaScript 的逻辑和变量带入到标签中。[🔗](https://react.docschina.org/learn/javascript-in-jsx-with-curly-braces#using-curly-braces-a-window-into-the-javascript-world)
-- 它们会在 JSX 标签中的内容区域或紧随属性的 `=` 后起作用。
-- `{{` 和 `}}` 并不是什么特殊的语法：它只是包在 JSX 大括号内的 JavaScript 对象。[🔗](https://react.docschina.org/learn/javascript-in-jsx-with-curly-braces#using-double-curlies-css-and-other-objects-in-jsx)
+- JSX 引号内的值会作为字符串传递给属性
+- 大括号让你可以将 JavaScript 的逻辑和变量带入到标签中[🔗](https://react.docschina.org/learn/javascript-in-jsx-with-curly-braces#using-curly-braces-a-window-into-the-javascript-world)
+- 它们会在 JSX 标签中的内容区域或紧随属性的 `=` 后起作用
+- `{{ }}` 并不是什么特殊的语法：它只是包在 JSX 大括号内的 JavaScript 对象。[🔗](https://react.docschina.org/learn/javascript-in-jsx-with-curly-braces#using-double-curlies-css-and-other-objects-in-jsx)
 
 ### 将 props 传递给组件 [🔗](https://react.docschina.org/learn/passing-props-to-a-component)
 
@@ -50,7 +50,6 @@
 - 渲染随时可能发生，因此组件不应依赖于彼此的渲染顺序。
 - 你不应该改变任何用于组件渲染的输入。这包括 props、state 和 context。通过 “设置” state 来更新界面，而不要改变预先存在的对象。
 - 努力在你返回的 JSX 中表达你的组件逻辑。当你需要“改变事物”时，你通常希望在事件处理程序中进行。作为最后的手段，你可以使用 useEffect。
--
 
 ## 添加交互
 
@@ -123,13 +122,11 @@
 ### 选择 State 结构
 
 - 构建 state 的原则
-
   - 合并关联的 state
   - 避免互相矛盾的 state
   - 避免冗余的 state
   - 避免重复的 state
   - 避免深度嵌套的 state
-
 - 避免冗余和重复的 state，这样您就不需要保持同步。
 - 除非您特别想防止更新，否则不要将 props 放入 state 中。
 
@@ -246,14 +243,14 @@ function useReducer(reducer, initialState) {
 - 像 state 一样，你可以让它指向任何东西：字符串、对象，甚至是函数。
 - `useRef` 内部如何运行的
 
-  ```js
-  import { useState } from 'react'
+```js
+import { useState } from 'react'
 
-  export function useRef(initialValue) {
-    const [state, _] = useState({ current: initialValue })
-    return state
-  }
-  ```
+export function useRef(initialValue) {
+  const [state, _] = useState({ current: initialValue })
+  return state
+}
+```
 
 - 何时使用 ref
   - 存储 timeout ID
@@ -261,12 +258,12 @@ function useReducer(reducer, initialState) {
   - 存储不需要被用来计算 JSX 的其他对象。
 - ref 和 state 的不同之处
 
-  | ref                                                     | state                                                                                         |
-  | ------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-  | `useRef(initialValue)`返回 `{ current: initialValue }`  | `useState(initialValue)` 返回 state 变量的当前值和一个 state 设置函数 ( `[value, setValue]`)  |
-  | 更改时不会触发重新渲染                                  | 更改时触发重新渲染。                                                                          |
-  | 可变 —— 你可以在渲染过程之外修改和更新 `current` 的值。 | “不可变” —— 你必须使用 state 设置函数来修改 state 变量，从而排队重新渲染。                    |
-  | 你不应在渲染期间读取（或写入） `current` 值。           | 你可以随时读取 state。但是，每次渲染都有自己不变的 state [快照](/learn/state-as-a-snapshot)。 |
+  | ref                                                     | state                                                                                                                    |
+  | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+  | `useRef(initialValue)`返回 `{ current: initialValue }`  | `useState(initialValue)` 返回 state 变量的当前值和一个 state 设置函数 ( `[value, setValue]`)                             |
+  | 更改时不会触发重新渲染                                  | 更改时触发重新渲染。                                                                                                     |
+  | 可变 —— 你可以在渲染过程之外修改和更新 `current` 的值。 | “不可变” —— 你必须使用 state 设置函数来修改 state 变量，从而排队重新渲染。                                               |
+  | 你不应在渲染期间读取（或写入） `current` 值。           | 你可以随时读取 state。但是，每次渲染都有自己不变的 state [快照](https://react.docschina.org/learn/state-as-a-snapshot)。 |
 
 ### 使用 ref 操作 DOM
 
@@ -393,10 +390,8 @@ function useSyncExternalStore(subscribe, defaultValue) {
 
 - 事件处理函数只在响应特定的交互操作时运行
 - 响应式值和响应式逻辑
-
   - 事件处理函数内部的逻辑是非响应式的。
   - Effect 内部的逻辑是响应式的，如果 Effect 要读取响应式值，你必须将它指定为依赖项。如果接下来的重新渲染引起那个值变化，React 就会使用新值重新运行 Effect 内的逻辑。
-
 - Effect Event
   - 非响应式逻辑和周围响应式 Effect 隔离开来的方法。
   - 它是 Effect 逻辑的一部分，但是其行为更像事件处理函数。它内部的逻辑不是响应式的，而且能一直“看见”最新的 props 和 state。
