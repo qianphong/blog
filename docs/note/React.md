@@ -178,7 +178,7 @@
 
 对于拥有许多状态更新逻辑的组件来说，过于分散的事件处理程序可能会令人不知所措。对于这种情况，你可以将组件的所有状态更新逻辑整合到一个外部函数中，这个函数叫作 reducer。
 
-- 为什么称之为 reducer? (🔗)[https://react.docschina.org/learn/extracting-state-logic-into-a-reducer#why-are-reducers-called-this-way]
+- 为什么称之为 reducer? [🔗](https://react.docschina.org/learn/extracting-state-logic-into-a-reducer#why-are-reducers-called-this-way)
 - useReducer 钩子接受 2 个参数：
   - 一个 reducer 函数
   - 一个初始的 state
