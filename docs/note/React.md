@@ -3,7 +3,7 @@
 ## 记忆点
 
 1. 组件内包含渲染函数、事件处理函数、Effect 处理函数
-2. 用在 Effect 中的事件处理函数，不需要添加到依赖的，使用 `useEffectEvent()`）
+2. 用在 Effect 中的事件处理函数，不需要添加到依赖的，使用 `useEffectEvent()`
 
 ## React 哲学
 
@@ -13,9 +13,37 @@
   - 通过 props **从父组件传递**？
   - 是否可以基于已存在与组件中的 state 或者 props 进行 **计算**？
 
+## 关于 Render 的思考
+
+### 有没有必要在乎组件的渲染次数?
+
+> 正常情况下，无需过分在乎 React 组件的渲染，要理解执行 render 不等于真正的浏览器渲染视图，render 阶段执行的是在 JS 中，JS 中的代码运行远快于浏览器的 Rendering 和 Painting 的，更何况 React 还提供了 diff 算法等手段，去复用真实的 Dom。
+
+### 什么时候需要注意渲染节流
+
+- 大量数据渲染，如：列表渲染
+- 表单数据渲染，如：输入框输入时候的实时渲染
+- 越靠近跟组件的组件，越容易出现性能问题，因为跟组件的更新会导致所有子组件的更新，所以要尽量减少跟组件的更新
+
+## Hook
+
+函数组件，每一次更新都是一次新的函数执行，一次函数组件的更新，里面的变量都会重新声明。为了让函数组件可以保存一些状态，执行一些副作用钩子，React Hooks 应运而生。
+
+- 以 `use` 开头的函数被称为 Hook
+- 只能在组件的顶层调用 Hook
+
+## 组件间通信方式
+
+1. `props` 和 `callback`
+2. `ref` 方式
+3. 状态管理库，如：Redux、MoBox
+4. `Context`
+5. EventBus
+
 ## 描述 UI
 
 - 组件名称必须以大写字母开头
+- 函数组件返回 JSX 标签
 - 万物皆组件 [🔗](https://react.docschina.org/learn/your-first-component#components-all-the-way-down)
 - 不要嵌套组件的定义 [🔗](https://react.docschina.org/learn/your-first-component#nesting-and-organizing-components)
 - 默认导出还是具名导出? [🔗](https://react.docschina.org/learn/importing-and-exporting-components#default-vs-named-exports)
@@ -25,6 +53,7 @@
 - 只能返回一个根元素
 - 标签必须闭合
 - 使用驼峰式命名法给属性命名
+- 使用 `className` 添加类名
 
 ### JSX 中使用 JavaScript
 

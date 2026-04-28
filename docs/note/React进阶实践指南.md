@@ -83,8 +83,9 @@ const Parent = () => {
 ## 不要在 hooks 的参数中使用函数或者 `new` 实例
 
 ```tsx
+// ❌️ bad，不要使用函数，或者 new 实例，否则每次都会重新执行
 const list = useRef(Array.from({ length: 1000 }).map(() => Date.now()))
-// 不要使用函数，或者 new 实例，否则每次都会重新执行
+// ✅️ good
 const list = useRef<number[]>()
 if (!list.current) {
   list.current = Array.from({ length: 1000 }).map(() => Date.now())
